@@ -178,7 +178,7 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ---------- Intro curtain ---------- */
 .curtain { position: fixed; inset: 0; z-index: 900; display: none; place-items: center; background: var(--scrim); color: var(--on-image); pointer-events: none; }
-.js.intro .curtain { display: grid; animation: curtain-out 900ms var(--ease-io) 900ms forwards; }
+.js.is-intro .curtain { display: grid; animation: curtain-out 900ms var(--ease-io) 900ms forwards; }
 .curtain span { font: 500 clamp(2.4rem, 6vw, 5rem)/1 var(--serif); letter-spacing: -0.05em; opacity: 0; animation: curtain-name 1100ms var(--ease) 100ms forwards; }
 @keyframes curtain-name { 0% { opacity: 0; transform: translateY(20px); } 45% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-12px); } }
 @keyframes curtain-out { to { clip-path: inset(0 0 100% 0); } }
@@ -233,7 +233,7 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 64rem) { .page-hero__text, .page-hero__aside { grid-column: 1 / -1; justify-self: start; } }
 
 /* Split line reveal for big heads */
-.intro .hero .lines { --d: 1100ms; }
+.is-intro .hero .lines { --d: 1100ms; }
 .lines > span { display: block; overflow: hidden; padding-bottom: 0.06em; margin-bottom: -0.06em; }
 .lines > span > span { display: block; }
 .js .lines > span > span { transform: translateY(105%); transition: transform 1200ms var(--ease); transition-delay: calc(var(--l, 0) * 110ms + var(--d, 0ms)); }
@@ -455,7 +455,7 @@ p { margin: 0; text-wrap: pretty; }
   .js .scrub .w { opacity: 1; }
   .js .street path, .js .street circle { stroke-dashoffset: 0; }
   .marquee__toggle, .scroll-cue i::after { display: none; }
-  .js.intro .curtain { display: none; }
+  .js.is-intro .curtain { display: none; }
 }
 
 /* =========================================================
