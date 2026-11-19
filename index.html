@@ -5,13 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Noor Rahman | Associate Broker, Denver metro</title>
 <meta name="description" content="Noor Rahman is an associate broker with Keller Williams who helps people buy, sell and invest in homes across Denver metro, Colorado.">
+<link rel="canonical" href="https://noorrahman.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Noor Rahman">
+<meta property="og:url" content="https://noorrahman.com/">
+<meta property="og:title" content="Noor Rahman | Associate Broker, Denver metro">
+<meta property="og:description" content="Noor Rahman is an associate broker with Keller Williams who helps people buy, sell and invest in homes across Denver metro, Colorado.">
+<meta property="og:image" content="https://noorrahman.com/images/og-share.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#121110">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('is-intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('is-intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/house-hero.jpg" imagesrcset="images/house-hero-960.jpg 960w, images/house-hero.jpg 2400w" imagesizes="100vw">
+<link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/logo/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/logo/favicon-180.png">
 <link rel="stylesheet" href="css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Noor Rahman","url":"https://noorrahman.com/","image":"https://noorrahman.com/images/noor-headshot.jpg","telephone":"+1-303-597-8413","email":"contact@noorrahman.com","parentOrganization":{"@type":"Organization","name":"Keller Williams Realty"},"areaServed":["Centennial, CO","Greenwood Village, CO","Englewood, CO","Westminster, CO","Highlands Ranch, CO","Denver, CO"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,7 +33,7 @@
 
 <header class="header">
   <div class="container header__inner">
-    <a class="wordmark" href="index.html" aria-label="Noor Rahman, home">Noor Rahman</a>
+    <a class="brand" href="index.html" aria-label="Noor Rahman, home"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" aria-hidden="true"><path class="brand__roof" d="M3.5 18 L19.5 5.5 L35.5 18"/><path d="M8.5 35 V21 L19.5 35 V21 H25.6 A3.9 3.9 0 0 1 25.6 28.8 H19.5 M25.2 28.8 L30.6 35"/></svg><span class="brand__text"><b>Noor Rahman</b><small>Keller Williams</small></span></a>
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="buy.html">Buy</a></li>
@@ -30,34 +44,24 @@
       </ul>
     </nav>
     <div class="header__end">
-      <div class="themes" role="group" aria-label="Colour theme">
-        <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
-        <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
-        <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
-      </div>
       <a class="btn btn--small" href="contact.html">Let’s talk</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer"><b>Menu</b><span aria-hidden="true"></span></button>
     </div>
   </div>
 </header>
 <div class="drawer" id="drawer">
-  <ul>
+  <nav aria-label="Menu"><ul>
     <li><a href="buy.html">Buy</a></li>
     <li><a href="sell.html">Sell</a></li>
     <li><a href="invest.html">Invest</a></li>
     <li><a href="communities.html">Communities</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="themes" role="group" aria-label="Colour theme">
-    <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
-    <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
-    <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
-  </div>
+  </ul></nav>
   <a class="link" href="tel:+13035978413">(303) 597-8413</a>
 </div>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__media" data-parallax="0.18">
@@ -84,7 +88,7 @@
     </div>
   </section>
 
-  <div class="marquee" aria-label="Communities Noor works in">
+  <div class="marquee" role="region" aria-label="Communities Noor works in">
     <div class="marquee__track">
       <span>Centennial</span><span><em>Greenwood Village</em></span><span>Englewood</span><span><em>Westminster</em></span><span>Highlands Ranch</span><span><em>Denver</em></span>
       <span aria-hidden="true">Centennial</span><span aria-hidden="true"><em>Greenwood Village</em></span><span aria-hidden="true">Englewood</span><span aria-hidden="true"><em>Westminster</em></span><span aria-hidden="true">Highlands Ranch</span><span aria-hidden="true"><em>Denver</em></span>
@@ -125,7 +129,7 @@
         <ol class="path__steps">
           <li><strong>Price from nearby sales</strong><span>A range you can trace to real sales.</span></li>
           <li><strong>Prepare the home</strong><span>Fix what matters. Skip what does not.</span></li>
-          <li><strong>List and show</strong><span>Photos, listing and showings handled.</span></li>
+          <li><strong>List and show</strong><span>Photos, listing and showings arranged.</span></li>
           <li><strong>Offers to closing</strong><span>Compared side by side, then seen through.</span></li>
         </ol>
         <div class="path__side">
@@ -153,17 +157,17 @@
     </div>
   </section>
 
-  <section class="section section--alt" aria-labelledby="trust-title">
+  <section class="section section--alt section--tight" aria-labelledby="trust-title">
     <div class="container">
       <div class="section-head">
         <p class="label" data-reveal>Why Noor</p>
-        <h2 class="lines" id="trust-title"><span><span style="--l:0">Licensed. Named.</span></span><span><span style="--l:1">Accountable.</span></span></h2>
+        <h2 class="lines" id="trust-title"><span><span style="--l:0">Licensed. Local.</span></span><span><span style="--l:1">Accountable.</span></span></h2>
       </div>
       <div class="trust">
         <div data-reveal style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><strong>Licensed in Colorado</strong><span>Associate broker</span></div>
         <div data-reveal style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13l-1.5 8 5-3 5 3-1.5-8"/></svg><strong>REALTOR®</strong><span>Bound by the NAR Code of Ethics</span></div>
         <div data-reveal style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><strong>Keller Williams</strong><span>Brokerage backing</span></div>
-        <div data-reveal style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>One point of contact</strong><span>Noor, first call to closing</span></div>
+        <div data-reveal style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>One point of contact</strong><span>Your point of contact, start to finish</span></div>
       </div>
     </div>
   </section>
@@ -176,7 +180,7 @@
         <p class="small muted">Illustrative images, not listings.</p>
       </div>
       <div class="hscroll__track">
-        <article class="hcard"><div class="frame"><img src="images/house-hero-960.jpg" width="960" height="536" alt="" loading="lazy" style="object-position: 70% 50%"></div><h3>Mountain modern</h3><p>Stone, timber, tall glass.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/house-entry-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Contemporary stone</h3><p>Stone, walnut, warm light.</p></article>
         <article class="hcard"><div class="frame"><img src="images/house-denver-square-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Denver Square</h3><p>Brick, hipped roof, deep porch.</p></article>
         <article class="hcard"><div class="frame"><img src="images/house-farmhouse-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Modern farmhouse</h3><p>Board and batten, black windows.</p></article>
         <article class="hcard"><div class="frame"><img src="images/house-townhomes-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Townhome</h3><p>Low upkeep, close to rail.</p></article>
@@ -219,7 +223,7 @@
       </div>
       <div class="meet__text">
         <p class="label" data-reveal>Meet Noor</p>
-        <h2 class="lines"><span><span style="--l:0">The broker you</span></span><span><span style="--l:1">will work with.</span></span></h2>
+        <h2 class="lines"><span><span style="--l:0">The broker</span></span><span><span style="--l:1">you’ll work with.</span></span></h2>
         <p data-reveal>Colorado associate broker and REALTOR® with Keller Williams.</p>
         <p data-reveal><span class="fill">Noor’s own story goes here once he sends it.</span></p>
         <a class="btn" href="about.html" data-reveal>More about Noor <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
@@ -232,13 +236,13 @@
       <div class="faq-head">
         <p class="label" data-reveal>Questions</p>
         <h2 class="lines" id="faq-title"><span><span style="--l:0">Good to</span></span><span><span style="--l:1">know first.</span></span></h2>
-        <a class="link" href="contact.html" data-reveal>Ask your own</a>
+        <a class="link" href="contact.html" data-reveal>Ask your own question</a>
       </div>
       <div class="faq" data-reveal>
         <details><summary>Which areas does Noor cover?</summary><div><p>Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch, Denver and nearby Denver metro.</p></div></details>
-        <details><summary>Do I need a pre-approval before touring?</summary><div><p>Sellers usually expect one with an offer, so talk to a lender early. Noor can tell you when.</p></div></details>
+        <details><summary>Do I need a pre-approval before touring?</summary><div><p>Not to tour. Sellers usually expect one with an offer, so talk to a lender early.</p></div></details>
         <details><summary>How is a listing price set?</summary><div><p>From recent sales of similar homes nearby. You see those sales before you decide.</p></div></details>
-        <details><summary>Who else is involved in a purchase?</summary><div><p>Usually a lender, an inspector, an appraiser and a title company. Noor keeps their deadlines in step.</p></div></details>
+        <details><summary>Who else is involved in a purchase?</summary><div><p>Usually a lender, an inspector, an appraiser and a title company. Noor helps keep their deadlines in step.</p></div></details>
         <details><summary>Can I just ask a question first?</summary><div><p>Yes. Call or text <a class="link" href="tel:+13035978413">(303) 597-8413</a>, or write from the <a class="link" href="contact.html">contact page</a>.</p></div></details>
       </div>
     </div>
@@ -263,20 +267,20 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__top">
-      <div class="footer__col">
-        <h2>Let’s find your next address.</h2>
-        <a class="link" href="contact.html">Get in touch</a>
+      <div class="footer__col footer__brand">
+        <a class="brand" href="index.html" aria-label="Noor Rahman, home"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" aria-hidden="true"><path class="brand__roof" d="M3.5 18 L19.5 5.5 L35.5 18"/><path d="M8.5 35 V21 L19.5 35 V21 H25.6 A3.9 3.9 0 0 1 25.6 28.8 H19.5 M25.2 28.8 L30.6 35"/></svg><span class="brand__text"><b>Noor Rahman</b><small>Keller Williams</small></span></a>
+        <p>Associate Broker and REALTOR® across Denver metro, Colorado.</p>
       </div>
       <div class="footer__col">
         <p class="label label--plain">Pages</p>
-        <ul>
+        <nav aria-label="Footer"><ul>
           <li><a href="buy.html">Buy</a></li>
           <li><a href="sell.html">Sell</a></li>
           <li><a href="invest.html">Invest</a></li>
           <li><a href="communities.html">Communities</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-        </ul>
+        </ul></nav>
       </div>
       <div class="footer__col">
         <p class="label label--plain">Contact</p>

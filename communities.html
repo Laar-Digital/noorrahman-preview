@@ -4,13 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Communities | Noor Rahman, Denver metro</title>
-<meta name="description" content="Parks, trails, rail stations and homes in Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch and Denver, the six communities Noor Rahman works in.">
+<meta name="description" content="Parks, trails, rail stations and homes in Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch and Denver.">
+<link rel="canonical" href="https://noorrahman.com/communities.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Noor Rahman">
+<meta property="og:url" content="https://noorrahman.com/communities.html">
+<meta property="og:title" content="Communities | Noor Rahman, Denver metro">
+<meta property="og:description" content="Parks, trails, rail stations and homes in Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch and Denver.">
+<meta property="og:image" content="https://noorrahman.com/images/og-share.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#121110">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('is-intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('is-intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/neighbourhood.jpg" imagesrcset="images/neighbourhood-960.jpg 960w, images/neighbourhood.jpg 2400w" imagesizes="100vw">
+<link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/logo/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/logo/favicon-180.png">
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -18,7 +31,7 @@
 
 <header class="header">
   <div class="container header__inner">
-    <a class="wordmark" href="index.html" aria-label="Noor Rahman, home">Noor Rahman</a>
+    <a class="brand" href="index.html" aria-label="Noor Rahman, home"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" aria-hidden="true"><path class="brand__roof" d="M3.5 18 L19.5 5.5 L35.5 18"/><path d="M8.5 35 V21 L19.5 35 V21 H25.6 A3.9 3.9 0 0 1 25.6 28.8 H19.5 M25.2 28.8 L30.6 35"/></svg><span class="brand__text"><b>Noor Rahman</b><small>Keller Williams</small></span></a>
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="buy.html">Buy</a></li>
@@ -29,34 +42,24 @@
       </ul>
     </nav>
     <div class="header__end">
-      <div class="themes" role="group" aria-label="Colour theme">
-        <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
-        <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
-        <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
-      </div>
       <a class="btn btn--small" href="contact.html">Let’s talk</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer"><b>Menu</b><span aria-hidden="true"></span></button>
     </div>
   </div>
 </header>
 <div class="drawer" id="drawer">
-  <ul>
+  <nav aria-label="Menu"><ul>
     <li><a href="buy.html">Buy</a></li>
     <li><a href="sell.html">Sell</a></li>
     <li><a href="invest.html">Invest</a></li>
     <li><a href="communities.html" aria-current="page">Communities</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="themes" role="group" aria-label="Colour theme">
-    <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
-    <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
-    <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
-  </div>
+  </ul></nav>
   <a class="link" href="tel:+13035978413">(303) 597-8413</a>
 </div>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <section class="page-hero" aria-labelledby="hero-title">
     <div class="hero__media" data-parallax="0.15">
@@ -101,7 +104,7 @@
       <div class="finder" data-finder data-reveal>
         <div class="finder__bar">
           <div class="chips" role="group" aria-label="Filter communities">
-            <button type="button" data-tag="rail" aria-pressed="false">Light rail</button>
+            <button type="button" data-tag="rail" aria-pressed="false">Rail</button>
             <button type="button" data-tag="trails" aria-pressed="false">Trails</button>
             <button type="button" data-tag="water" aria-pressed="false">Lake or reservoir</button>
             <button type="button" data-tag="historic" aria-pressed="false">Historic homes</button>
@@ -116,25 +119,25 @@
             <p class="label label--plain">Arapahoe County</p>
             <h3>Centennial</h3>
             <p>The High Line Canal Trail runs through it.</p>
-            <div class="tags"><span class="tag">Light rail</span><span class="tag">Trails</span></div>
+            <div class="tags"><span class="tag">Rail</span><span class="tag">Trails</span></div>
           </article>
           <article class="place-card" data-tags="rail trails tech">
             <p class="label label--plain">Arapahoe County</p>
             <h3>Greenwood Village</h3>
             <p>Next to the Denver Tech Center.</p>
-            <div class="tags"><span class="tag">Light rail</span><span class="tag">Trails</span><span class="tag">Near the Tech Center</span></div>
+            <div class="tags"><span class="tag">Rail</span><span class="tag">Trails</span><span class="tag">Near the Tech Center</span></div>
           </article>
           <article class="place-card" data-tags="rail historic">
             <p class="label label--plain">Arapahoe County</p>
             <h3>Englewood</h3>
             <p>Incorporated 1903. Home to mid-century Arapahoe Acres.</p>
-            <div class="tags"><span class="tag">Light rail</span><span class="tag">Historic homes</span></div>
+            <div class="tags"><span class="tag">Rail</span><span class="tag">Historic homes</span></div>
           </article>
           <article class="place-card" data-tags="rail trails water">
             <p class="label label--plain">Adams and Jefferson counties</p>
             <h3>Westminster</h3>
             <p>Standley Lake Regional Park and the Big Dry Creek Trail.</p>
-            <div class="tags"><span class="tag">Light rail</span><span class="tag">Trails</span><span class="tag">Lake or reservoir</span></div>
+            <div class="tags"><span class="tag">Rail</span><span class="tag">Trails</span><span class="tag">Lake or reservoir</span></div>
           </article>
           <article class="place-card" data-tags="trails newer">
             <p class="label label--plain">Douglas County</p>
@@ -145,8 +148,8 @@
           <article class="place-card" data-tags="rail trails historic">
             <p class="label label--plain">City and County of Denver</p>
             <h3>Denver</h3>
-            <p>Victorian, Denver Square and bungalow homes near the centre.</p>
-            <div class="tags"><span class="tag">Light rail</span><span class="tag">Trails</span><span class="tag">Historic homes</span></div>
+            <p>Victorian, Denver Square and bungalow homes near the center.</p>
+            <div class="tags"><span class="tag">Rail</span><span class="tag">Trails</span><span class="tag">Historic homes</span></div>
           </article>
         </div>
         <p class="finder__empty" hidden>No community has all of those. Clear a filter.</p>
@@ -162,16 +165,16 @@
       </div>
       <ul class="rows">
         <li data-reveal><h3>Centennial</h3><p>Dry Creek station</p><span class="rows__end">E and R lines</span></li>
-        <li data-reveal><h3>Greenwood Village</h3><p>Arapahoe at Village Center station</p></li>
+        <li data-reveal><h3>Greenwood Village</h3><p>Arapahoe at Village Center station</p><span class="rows__end">E and R lines</span></li>
         <li data-reveal><h3>Englewood</h3><p>Englewood station</p><span class="rows__end">D Line</span></li>
         <li data-reveal><h3>Westminster</h3><p>Westminster Station, trains to Union Station</p><span class="rows__end">B Line</span></li>
-        <li data-reveal><h3>Denver</h3><p>Union Station</p></li>
+        <li data-reveal><h3>Denver</h3><p>Union Station</p><span class="rows__end">Hub for light rail and commuter rail</span></li>
       </ul>
     </div>
   </section>
 
   <section class="cta" id="talk" aria-labelledby="cta-title">
-    <div class="hero__media" data-parallax="0.12"><img src="images/interior-kitchen.jpg" srcset="images/interior-kitchen-960.jpg 960w, images/interior-kitchen.jpg 1856w" sizes="100vw" width="1856" height="2304" alt="" loading="lazy"></div>
+    <div class="hero__media" data-parallax="0.12"><img src="images/house-denver-square.jpg" srcset="images/house-denver-square-960.jpg 960w, images/house-denver-square.jpg 1600w" sizes="100vw" width="1600" height="1986" alt="" loading="lazy"></div>
     <div class="container cta__inner">
       <p class="label">Ask about a community</p>
       <h2 class="lines" id="cta-title"><span><span style="--l:0">Got a street</span></span><span><span style="--l:1">in mind?</span></span></h2>
@@ -179,6 +182,7 @@
         <a class="big" href="tel:+13035978413">(303) 597-8413</a>
         <a class="big" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a>
         <small>Call or text Noor’s mobile.</small>
+        <a class="link link--light" href="contact.html#write">Write to Noor</a>
       </div>
     </div>
   </section>
@@ -188,20 +192,20 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__top">
-      <div class="footer__col">
-        <h2>Let’s find your next address.</h2>
-        <a class="link" href="contact.html">Get in touch</a>
+      <div class="footer__col footer__brand">
+        <a class="brand" href="index.html" aria-label="Noor Rahman, home"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" aria-hidden="true"><path class="brand__roof" d="M3.5 18 L19.5 5.5 L35.5 18"/><path d="M8.5 35 V21 L19.5 35 V21 H25.6 A3.9 3.9 0 0 1 25.6 28.8 H19.5 M25.2 28.8 L30.6 35"/></svg><span class="brand__text"><b>Noor Rahman</b><small>Keller Williams</small></span></a>
+        <p>Associate Broker and REALTOR® across Denver metro, Colorado.</p>
       </div>
       <div class="footer__col">
         <p class="label label--plain">Pages</p>
-        <ul>
+        <nav aria-label="Footer"><ul>
           <li><a href="buy.html">Buy</a></li>
           <li><a href="sell.html">Sell</a></li>
           <li><a href="invest.html">Invest</a></li>
           <li><a href="communities.html">Communities</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-        </ul>
+        </ul></nav>
       </div>
       <div class="footer__col">
         <p class="label label--plain">Contact</p>

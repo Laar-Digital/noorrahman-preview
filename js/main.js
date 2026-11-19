@@ -1,17 +1,11 @@
-// Noor Rahman, website v2: themes, header, menu, smooth scroll, reveals, parallax, scrubbed text, pinned story, horizontal gallery, forms.
+// Noor Rahman website: header, menu, smooth scroll, reveals, parallax, video backgrounds, guide tabs, calculators, checklists, community finder, forms.
 (() => {
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const wide = () => matchMedia('(min-width: 64.01rem)').matches;
+  let lenis = null;
+  const behindMenu = () => [document.querySelector('main'), document.querySelector('footer'), document.querySelector('.skip')].filter(Boolean);
 
-  /* Themes */
-  const setTheme = (t) => {
-    root.dataset.theme = t;
-    try { localStorage.setItem('nr-theme', t); } catch (e) {}
-    document.querySelectorAll('[data-set-theme]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setTheme === t)));
-  };
-  document.querySelectorAll('[data-set-theme]').forEach((b) => b.addEventListener('click', () => setTheme(b.dataset.setTheme)));
-  setTheme(root.dataset.theme || 'noir');
 
   /* Header: solid after the hero starts to scroll, hides on the way down */
   const header = document.querySelector('.header');
@@ -33,7 +27,9 @@
     if (!drawer) return;
     drawer.classList.remove('is-open'); header.classList.remove('menu-open');
     menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.querySelector('b').textContent = 'Menu';
-    document.body.style.overflow = '';
+    document.body.style.overflow = ''; root.style.overflow = '';
+    behindMenu().forEach((el) => { el.inert = false; });
+    lenis?.start();
   };
   if (drawer && menuBtn) {
     menuBtn.addEventListener('click', () => {
@@ -41,7 +37,9 @@
       if (!open) return closeMenu();
       drawer.classList.add('is-open'); header.classList.add('menu-open'); header.classList.remove('is-hidden');
       menuBtn.setAttribute('aria-expanded', 'true'); menuBtn.querySelector('b').textContent = 'Close';
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'; root.style.overflow = 'hidden';
+      behindMenu().forEach((el) => { el.inert = true; });
+      lenis?.stop();
       drawer.querySelector('a')?.focus();
     });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && drawer.classList.contains('is-open')) { closeMenu(); menuBtn.focus(); } });
@@ -50,7 +48,7 @@
 
   /* Smooth scroll */
   if (!reduce && window.Lenis) {
-    const lenis = new window.Lenis({ lerp: 0.09, anchors: true });
+    lenis = new window.Lenis({ lerp: 0.09, anchors: true });
     const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
   }
@@ -181,7 +179,9 @@
     const run = () => {
       calc.querySelectorAll('input[data-fmt]').forEach((i) => {
         const o = calc.querySelector(`output[for="${i.id}"]`);
-        if (o) o.textContent = fmt(Number(i.value), i.dataset.fmt);
+        const txt = fmt(Number(i.value), i.dataset.fmt);
+        if (o) o.textContent = txt;
+        i.setAttribute('aria-valuetext', txt);
       });
       if (calc.dataset.calc === 'mortgage') {
         const price = val('price'); const down = price * val('down') / 100; const loan = price - down;
@@ -195,11 +195,36 @@
         const costs = val('payment') + val('taxins') + val('hoa') + vac + upkeep;
         const flow = rent - costs;
         put('costs', usd.format(costs)); put('cashflow', usd.format(flow)); put('yearly', usd.format(flow * 12));
-        calc.querySelectorAll('[data-out="cashflow"]').forEach((o) => o.classList.toggle('is-neg', flow < 0));
+        calc.querySelectorAll('[data-out="cashflow"], [data-out="yearly"]').forEach((o) => o.classList.toggle('is-neg', flow < 0));
       }
     };
+    // One quiet announcement when a slider is released, not on every step
+    calc.querySelector('.calc__out')?.removeAttribute('aria-live');
+    const say = document.createElement('p');
+    say.className = 'visually-hidden'; say.setAttribute('aria-live', 'polite');
+    calc.append(say);
+    const big = calc.querySelector('.calc__big'); const unit = calc.querySelector('.calc__unit');
     calc.addEventListener('input', run);
+    calc.addEventListener('change', () => { if (big) say.textContent = `${unit ? unit.textContent + ': ' : ''}${big.textContent}`; });
     run();
+  });
+
+  /* Video backgrounds: muted, looping, with a visible pause; still poster under reduced motion */
+  document.querySelectorAll('.hero__media video, video[data-bg]').forEach((v) => {
+    const box = v.closest('.frame') || v.closest('section') || v.parentElement;
+    if (reduce) { v.removeAttribute('autoplay'); v.pause(); return; }
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'media-toggle'; btn.textContent = 'Pause video';
+    btn.setAttribute('aria-pressed', 'false');
+    let held = false;
+    btn.addEventListener('click', () => {
+      held = !held;
+      if (held) v.pause(); else v.play().catch(() => {});
+      btn.textContent = held ? 'Play video' : 'Pause video';
+      btn.setAttribute('aria-pressed', String(held));
+    });
+    box.append(btn);
+    new IntersectionObserver(([e]) => { if (!held) (e.isIntersecting ? v.play().catch(() => {}) : v.pause()); }).observe(box);
   });
 
   /* Checklists: progress, saved in this browser only */
@@ -264,7 +289,12 @@
       e.preventDefault();
       const fields = [...form.querySelectorAll('input:not([type="radio"]), select, textarea')];
       const bad = fields.find((f) => !f.checkValidity());
-      fields.forEach((f) => f.toggleAttribute('aria-invalid', !f.checkValidity()));
+      if (!help.id) help.id = `help-${Math.random().toString(36).slice(2, 8)}`;
+      fields.forEach((f) => {
+        const ok = f.checkValidity();
+        f.setAttribute('aria-invalid', String(!ok));
+        if (!ok) f.setAttribute('aria-describedby', help.id); else if (f.getAttribute('aria-describedby') === help.id) f.removeAttribute('aria-describedby');
+      });
       if (bad) {
         const label = form.querySelector(`label[for="${bad.id}"]`);
         help.textContent = `${label ? label.textContent.replace(/\s*\(optional\)/, '') : 'One field'} needs a look before this can go.`;
