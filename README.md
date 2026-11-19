@@ -1,3 +1,3 @@
-# Noor Rahman website preview
+# Noor Rahman website
 
-Design mock-up by Laar Digital. Not the live site.
+Live at https://noorrehman.com. Built by Laar Digital.
