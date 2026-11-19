@@ -1,162 +1,168 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="noir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buying a home with Noor Rahman, Denver metro</title>
-<meta name="description" content="How buying a home works with Noor Rahman, associate broker with Keller Williams: budget and lender, search and tours, offer, inspection and closing.">
-<script>document.documentElement.classList.add('js');</script>
-<link rel="preconnect" href="https://api.fontshare.com">
+<title>Buying a home with Noor Rahman | Denver metro</title>
+<meta name="description" content="How buying a home works with Noor Rahman, associate broker with Keller Williams: budget and pre-approval, search and tours, offer and negotiation, inspection to closing across Denver metro.">
+<meta name="theme-color" content="#121110">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://api.fontshare.com/v2/css?f[]=sentient@300,400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/house-farmhouse.jpg" imagesrcset="images/house-farmhouse-960.jpg 960w, images/house-farmhouse.jpg 1856w" imagesizes="100vw">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="nav">
-  <nav class="container nav__inner" aria-label="Main">
-    <ul class="nav__links">
-      <li><a href="buy.html" aria-current="page">Buy</a></li>
-      <li><a href="sell.html">Sell</a></li>
-      <li><a href="invest.html">Invest</a></li>
-    </ul>
-    <a class="nav__mark" href="index.html" aria-label="Noor Rahman, home">Noor Rahman</a>
-    <button class="btn btn--small nav__toggle" type="button" aria-expanded="false">Menu</button>
-    <ul class="nav__links nav__links--end">
-      <li><a href="communities.html">Communities</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a class="btn btn--small" href="contact.html">Talk to Noor</a></li>
-    </ul>
-  </nav>
+<header class="header">
+  <div class="container header__inner">
+    <a class="wordmark" href="index.html" aria-label="Noor Rahman, home">Noor Rahman</a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="buy.html" aria-current="page">Buy</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="invest.html">Invest</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="header__end">
+      <div class="themes" role="group" aria-label="Colour theme">
+        <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
+        <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
+        <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
+      </div>
+      <a class="btn btn--small" href="contact.html">Let’s talk</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer"><b>Menu</b><span aria-hidden="true"></span></button>
+    </div>
+  </div>
 </header>
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="buy.html" aria-current="page">Buy</a></li>
+    <li><a href="sell.html">Sell</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="communities.html">Communities</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="themes" role="group" aria-label="Colour theme">
+    <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
+    <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
+    <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
+  </div>
+  <a class="link" href="tel:+13035978413">(303) 597-8413</a>
+</div>
 
 <main id="main">
 
-  <section class="hero hero--page">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <h1>Buying a home in Denver metro</h1>
-        <p class="lead">Noor walks you from the first budget talk to closing day.</p>
-        <div class="hero__actions">
-          <a class="btn" href="tel:+13035978413">Call (303) 597-8413</a>
-          <a class="link" href="#steps">See the four steps</a>
+  <section class="page-hero" aria-labelledby="hero-title">
+    <div class="hero__media" data-parallax="0.15">
+      <img src="images/house-farmhouse.jpg" srcset="images/house-farmhouse-960.jpg 960w, images/house-farmhouse.jpg 1856w" sizes="100vw" width="1856" height="2304" alt="A modern farmhouse with white board and batten siding, black windows and a covered porch" fetchpriority="high" style="object-position: 50% 60%">
+    </div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__text">
+        <p class="label" data-reveal>Buying in Denver metro</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">Buy with someone</span></span><span><span style="--l:1">who reads every line.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">Noor walks you from the first budget talk to the closing table.</p>
+        <div class="hero__actions" data-reveal style="--i:4">
+          <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
+          <a class="link link--light" href="#steps">See the four steps</a>
         </div>
-      </div>
-      <div class="hero__visual">
-        <figure class="print">
-          <div class="print__frame" data-slot="hero" data-alt="Noor Rahman on a residential street">
-            <img src="images/noor-walking.jpg" srcset="images/noor-walking-640.jpg 640w, images/noor-walking.jpg 1122w" sizes="(min-width: 60rem) 34vw, 90vw" width="1122" height="1402" alt="Noor Rahman walking along a residential street carrying rolled house plans and a tablet" style="object-position: 50% 12%" fetchpriority="high">
-          </div>
-          <figcaption class="print__label">Noor Rahman <span>Associate broker</span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="steps">
-    <div class="container">
-      <div class="head">
-        <h2>Four steps to the keys</h2>
-      </div>
-      <ol class="steps">
-        <li data-reveal style="--i:0">
-          <h3>Budget and lender</h3>
-          <p>Agree a budget, then get a lender’s pre-approval.</p>
-        </li>
-        <li data-reveal style="--i:1">
-          <h3>Search and tour</h3>
-          <p>Noor sets up the search and tours with you.</p>
-        </li>
-        <li data-reveal style="--i:2">
-          <h3>Offer and negotiation</h3>
-          <p>He drafts the offer and negotiates with the seller’s side.</p>
-        </li>
-        <li data-reveal style="--i:3">
-          <h3>Inspection to closing</h3>
-          <p>Inspection, appraisal and title, tracked until you sign.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section section--band">
-    <div class="container split split--flip">
-      <div class="split__visual">
-        <figure class="print print--square">
-          <div class="print__frame" data-slot="tour" data-alt="Noor Rahman looking over a neighbourhood">
-            <img src="images/noor-overlook.jpg" srcset="images/noor-overlook-640.jpg 640w, images/noor-overlook.jpg 1122w" sizes="(min-width: 60rem) 45vw, 90vw" width="1122" height="1402" alt="Noor Rahman gesturing across a neighbourhood of homes at sunset" style="object-position: 50% 25%" loading="lazy">
-          </div>
-          <figcaption class="print__label">Out on a tour <span>Denver metro</span></figcaption>
-        </figure>
-      </div>
-      <div class="split__text">
-        <h2>A second pair of eyes</h2>
-        <p>Noor points out what listing photos leave out: the slope of the lot, the age of the roof, the road behind the fence.</p>
-        <a class="link" href="communities.html">See the communities he covers</a>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="head">
-        <h2>Who else is involved</h2>
-        <p class="lead">You choose each of them. Noor keeps them in step.</p>
+    <div class="container intro">
+      <p class="scrub">Read the contract before you fall for the kitchen. Noor explains price, dates and contingencies in plain words before you sign anything.</p>
+      <div class="intro__side" data-reveal>
+        <p class="label label--plain">Noor Rahman, REALTOR®</p>
+        <p>An associate broker with Keller Williams, working with buyers from Centennial to Westminster.</p>
+        <a class="link" href="communities.html">See the communities</a>
       </div>
-      <table class="index">
-        <thead><tr><th scope="col">Who</th><th scope="col">What they do</th><th scope="col">When</th></tr></thead>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="steps">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>How buying works</p>
+        <h2 class="lines"><span><span style="--l:0">Four steps</span></span><span><span style="--l:1">to the keys.</span></span></h2>
+        <p class="lead" data-reveal>Each step has a clear owner, and Noor keeps the next one in view.</p>
+      </div>
+      <ol class="steps">
+        <li data-reveal style="--i:0"><h3>Budget and lender</h3><p>Agree a budget, then get a lender’s pre-approval so your offer carries weight.</p></li>
+        <li data-reveal style="--i:1"><h3>Search and tours</h3><p>Noor sets up the search and books showings around your week.</p></li>
+        <li data-reveal style="--i:2"><h3>Offer and negotiation</h3><p>He drafts the offer and negotiates price and terms with the seller’s side.</p></li>
+        <li data-reveal style="--i:3"><h3>Inspection to closing</h3><p>Inspection, appraisal and title deadlines tracked until you sign.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="split__text">
+        <p class="label" data-reveal>On a tour</p>
+        <h2 class="lines"><span><span style="--l:0">A second</span></span><span><span style="--l:1">pair of eyes.</span></span></h2>
+        <p data-reveal>Noor points out what listing photos leave out: the slope of the lot, the age of the roof, the road behind the fence.</p>
+        <p data-reveal>You see the house as it is before you decide what to offer.</p>
+        <a class="btn" href="tel:+13035978413" data-reveal>Book a tour with Noor <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="split__media">
+        <div class="frame frame--tall" data-clip><img src="images/noor-walking.jpg" srcset="images/noor-walking-640.jpg 640w, images/noor-walking.jpg 1122w" sizes="(min-width: 64rem) 42vw, 100vw" width="1122" height="1402" alt="Noor Rahman walking along a residential street with house plans" loading="lazy" style="object-position: 50% 15%"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>Who else is involved</p>
+        <h2 class="lines"><span><span style="--l:0">You choose them.</span></span><span><span style="--l:1">Noor keeps them in step.</span></span></h2>
+        <p class="lead" data-reveal>Four other parties work on a purchase. Here is what each one does.</p>
+      </div>
+      <table class="table" data-reveal>
+        <thead>
+          <tr><th scope="col">Who</th><th scope="col">What they do</th><th scope="col">When</th></tr>
+        </thead>
         <tbody>
-          <tr><th scope="row">Lender</th><td>Reviews your finances and funds the loan</td><td>Before the search, then through closing</td></tr>
-          <tr><th scope="row">Inspector</th><td>Checks structure, roof and systems</td><td>After your offer is accepted</td></tr>
-          <tr><th scope="row">Appraiser</th><td>Gives the lender an independent opinion of value</td><td>While the loan is processed</td></tr>
-          <tr><th scope="row">Title company</th><td>Checks ownership records and runs the closing</td><td>From contract to keys</td></tr>
+          <tr><th scope="row">Lender</th><td>Reviews your finances and funds the loan.</td><td>Before the search, then through closing</td></tr>
+          <tr><th scope="row">Inspector</th><td>Checks the structure, roof and systems.</td><td>After your offer is accepted</td></tr>
+          <tr><th scope="row">Appraiser</th><td>Gives the lender an independent opinion of value.</td><td>While the loan is processed</td></tr>
+          <tr><th scope="row">Title company</th><td>Checks ownership records and runs the closing.</td><td>From contract to keys</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="section section--l">
-    <div class="container">
-      <p class="statement">Read the contract before you fall for the kitchen.</p>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
-      <div class="head">
-        <h2>What Noor handles for you</h2>
+      <div class="section-head">
+        <p class="label" data-reveal>What Noor handles</p>
+        <h2 class="lines"><span><span style="--l:0">His part,</span></span><span><span style="--l:1">step by step.</span></span></h2>
       </div>
       <dl class="facts">
-        <div data-reveal style="--i:0">
-          <dt>Before the search</dt>
-          <dd>A first conversation about budget, timing and the kind of property you want.</dd>
-        </div>
-        <div data-reveal style="--i:1">
-          <dt>On the search</dt>
-          <dd>Listings sent as they come up and showings booked around your week.</dd>
-        </div>
-        <div data-reveal style="--i:2">
-          <dt>At the offer</dt>
-          <dd>Price, dates and contingencies explained in plain words before you sign anything.</dd>
-        </div>
-        <div data-reveal style="--i:3">
-          <dt>Under contract</dt>
-          <dd>Deadlines watched and the inspection report read with you.</dd>
-        </div>
+        <div data-reveal style="--i:0"><dt>Before the search</dt><dd>A first conversation about budget, timing and the kind of property you want.</dd></div>
+        <div data-reveal style="--i:1"><dt>On the search</dt><dd>Listings sent as they come up, and showings booked around your week.</dd></div>
+        <div data-reveal style="--i:2"><dt>At the offer</dt><dd>Price, dates and contingencies explained in plain words before you sign.</dd></div>
+        <div data-reveal style="--i:3"><dt>Under contract</dt><dd>Deadlines watched, and the inspection report read with you.</dd></div>
       </dl>
     </div>
   </section>
 
-  <section class="section section--ink">
-    <div class="container close">
-      <h2>Talk to Noor about buying</h2>
-      <ul class="close__lines">
-        <li><a class="link" href="tel:+13035978413">(303) 597-8413</a></li>
-        <li><a class="link" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a></li>
-        <li><small>This is Noor’s mobile number.</small></li>
-      </ul>
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="hero__media" data-parallax="0.12"><img src="images/interior-kitchen.jpg" srcset="images/interior-kitchen-960.jpg 960w, images/interior-kitchen.jpg 1856w" sizes="100vw" width="1856" height="2304" alt="" loading="lazy"></div>
+    <div class="container cta__inner">
+      <p class="label">Ready to look</p>
+      <h2 class="lines" id="cta-title"><span><span style="--l:0">Let’s talk about</span></span><span><span style="--l:1">the home you want.</span></span></h2>
+      <div class="cta__lines" data-reveal>
+        <a class="big" href="tel:+13035978413">(303) 597-8413</a>
+        <a class="big" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a>
+        <small>Call or text Noor’s mobile.</small>
+      </div>
     </div>
   </section>
 
@@ -164,24 +170,40 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="footer__mark">Noor Rahman</p>
-    <ul class="footer__links">
-      <li><a href="buy.html">Buy</a></li>
-      <li><a href="sell.html">Sell</a></li>
-      <li><a href="invest.html">Invest</a></li>
-      <li><a href="communities.html">Communities</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="footer__top">
+      <div class="footer__col">
+        <h2>Let’s find your next address.</h2>
+        <a class="link" href="contact.html">Get in touch</a>
+      </div>
+      <div class="footer__col">
+        <p class="label label--plain">Pages</p>
+        <ul>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="sell.html">Sell</a></li>
+          <li><a href="invest.html">Invest</a></li>
+          <li><a href="communities.html">Communities</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="label label--plain">Contact</p>
+        <ul>
+          <li><a href="tel:+13035978413">(303) 597-8413</a></li>
+          <li><a href="mailto:contact@noorrahman.com">contact@noorrahman.com</a></li>
+          <li><a href="https://www.facebook.com/p/Noor-Rahman-100069390858541/">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__mark" aria-hidden="true">Noor Rahman</p>
     <div class="footer__legal">
-      <p>Noor Rahman, Associate Broker, REALTOR®. Licensed in Colorado. Keller Williams, <span class="fill" data-fill="brokerage">office name and address to be confirmed</span>.</p>
-      <p>Each office is independently owned and operated. Equal Housing Opportunity.</p>
+      <p>Noor Rahman, Associate Broker, REALTOR®. Licensed in Colorado. Keller Williams, <span class="fill">office name and address to be confirmed</span>. Each office is independently owned and operated. Equal Housing Opportunity.</p>
+      <p>House and interior photographs on this site are illustrative and are not listings. Design by Laar Digital.</p>
     </div>
   </div>
 </footer>
 
-<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
-document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
-<script src="js/site.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

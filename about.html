@@ -1,142 +1,149 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="noir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Noor Rahman, associate broker with Keller Williams</title>
-<meta name="description" content="Noor Rahman is an Associate Broker and REALTOR® with Keller Williams, licensed in Colorado. How he works with buyers, sellers and investors across Denver metro.">
-<script>document.documentElement.classList.add('js');</script>
-<link rel="preconnect" href="https://api.fontshare.com">
+<title>About Noor Rahman | Associate Broker, Denver metro</title>
+<meta name="description" content="Noor Rahman is a Colorado associate broker and REALTOR® with Keller Williams who works with buyers, sellers and investors across Denver metro.">
+<meta name="theme-color" content="#121110">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://api.fontshare.com/v2/css?f[]=sentient@300,400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/noor-overlook.jpg" imagesrcset="images/noor-overlook-640.jpg 640w, images/noor-overlook.jpg 1122w" imagesizes="100vw">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="nav">
-  <nav class="container nav__inner" aria-label="Main">
-    <ul class="nav__links">
-      <li><a href="buy.html">Buy</a></li>
-      <li><a href="sell.html">Sell</a></li>
-      <li><a href="invest.html">Invest</a></li>
-    </ul>
-    <a class="nav__mark" href="index.html" aria-label="Noor Rahman, home">Noor Rahman</a>
-    <button class="btn btn--small nav__toggle" type="button" aria-expanded="false">Menu</button>
-    <ul class="nav__links nav__links--end">
-      <li><a href="communities.html">Communities</a></li>
-      <li><a href="about.html" aria-current="page">About</a></li>
-      <li><a class="btn btn--small" href="contact.html">Talk to Noor</a></li>
-    </ul>
-  </nav>
+<header class="header">
+  <div class="container header__inner">
+    <a class="wordmark" href="index.html" aria-label="Noor Rahman, home">Noor Rahman</a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="invest.html">Invest</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+    <div class="header__end">
+      <div class="themes" role="group" aria-label="Colour theme">
+        <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
+        <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
+        <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
+      </div>
+      <a class="btn btn--small" href="contact.html">Let’s talk</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer"><b>Menu</b><span aria-hidden="true"></span></button>
+    </div>
+  </div>
 </header>
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="buy.html">Buy</a></li>
+    <li><a href="sell.html">Sell</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="communities.html">Communities</a></li>
+    <li><a href="about.html" aria-current="page">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="themes" role="group" aria-label="Colour theme">
+    <button type="button" data-set-theme="noir" aria-label="Noir theme" aria-pressed="true"></button>
+    <button type="button" data-set-theme="blanc" aria-label="Blanc theme" aria-pressed="false"></button>
+    <button type="button" data-set-theme="midnight" aria-label="Midnight theme" aria-pressed="false"></button>
+  </div>
+  <a class="link" href="tel:+13035978413">(303) 597-8413</a>
+</div>
 
 <main id="main">
 
-  <section class="hero hero--page">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <h1>One broker, from first call to closing.</h1>
-        <p class="lead">Noor Rahman is a Colorado associate broker and REALTOR® with Keller Williams.</p>
-        <div class="hero__actions">
-          <a class="btn" href="tel:+13035978413">Call (303) 597-8413</a>
-          <a class="link" href="contact.html#write">Write to Noor</a>
+  <section class="page-hero" aria-labelledby="hero-title">
+    <div class="hero__media" data-parallax="0.15">
+      <img src="images/noor-overlook.jpg" srcset="images/noor-overlook-640.jpg 640w, images/noor-overlook.jpg 1122w" sizes="100vw" width="1122" height="1402" alt="Noor Rahman gesturing over a neighbourhood at sunset" fetchpriority="high" style="object-position: 50% 12%">
+    </div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__text">
+        <p class="label" data-reveal>About Noor</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">One broker, from</span></span><span><span style="--l:1">first call to closing.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">Noor Rahman is a Colorado associate broker and REALTOR® with Keller Williams.</p>
+        <div class="hero__actions" data-reveal style="--i:4">
+          <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
+          <a class="link link--light" href="contact.html#write">Write to Noor</a>
         </div>
-      </div>
-      <div class="hero__visual">
-        <figure class="print">
-          <div class="print__frame" data-slot="hero" data-alt="Noor Rahman outside a home in Denver metro">
-            <img src="images/noor-casual.jpg" srcset="images/noor-casual-640.jpg 640w, images/noor-casual.jpg 1199w" sizes="(min-width: 60rem) 34vw, 90vw" width="1199" height="1312" alt="Noor Rahman in a light blue shirt in front of a stone house in evening light" style="object-position: 50% 20%" fetchpriority="high">
-          </div>
-          <figcaption class="print__label">Noor Rahman <span>Associate broker</span></figcaption>
-        </figure>
       </div>
     </div>
   </section>
 
   <section class="section">
+    <div class="container meet">
+      <div class="meet__media">
+        <div class="frame frame--tall" data-clip><img src="images/noor-casual.jpg" srcset="images/noor-casual-640.jpg 640w, images/noor-casual.jpg 1199w" sizes="(min-width: 64rem) 36vw, 80vw" width="1199" height="1312" alt="Noor Rahman in a blue shirt outdoors in golden evening light" loading="lazy" style="object-position: 50% 25%"></div>
+        <div class="frame frame--square meet__float" data-reveal style="--i:2"><img src="images/noor-headshot-640.jpg" width="640" height="585" alt="" loading="lazy" style="object-position: 50% 30%"></div>
+      </div>
+      <div class="meet__text">
+        <p class="label" data-reveal>Who you will work with</p>
+        <h2 class="lines"><span><span style="--l:0">The broker on</span></span><span><span style="--l:1">your side.</span></span></h2>
+        <p data-reveal>Noor works with buyers, sellers and investors across Denver metro, in Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch and Denver.</p>
+        <p data-reveal><span class="fill">Noor’s own story goes here once he sends it.</span></p>
+        <a class="link" href="communities.html" data-reveal>See the communities he covers</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
     <div class="container">
-      <div class="head">
-        <h2>How Noor works</h2>
-        <p class="lead">Four habits you can hold him to.</p>
+      <div class="section-head">
+        <p class="label" data-reveal>How Noor works</p>
+        <h2 class="lines"><span><span style="--l:0">Four habits you</span></span><span><span style="--l:1">can hold him to.</span></span></h2>
+        <p class="lead" data-reveal>The same way of working whether you are buying, selling or investing.</p>
       </div>
       <dl class="facts">
-        <div data-reveal style="--i:0">
-          <dt>One point of contact</dt>
-          <dd>This is Noor’s mobile number.</dd>
-        </div>
-        <div data-reveal style="--i:1">
-          <dt>The contract, explained</dt>
-          <dd>He walks you through each section before you sign anything.</dd>
-        </div>
-        <div data-reveal style="--i:2">
-          <dt>Pricing you can check</dt>
-          <dd>Every price comes with the recent sales behind it.</dd>
-        </div>
-        <div data-reveal style="--i:3">
-          <dt>Updates by call or text</dt>
-          <dd>You choose how you hear from him when something changes.</dd>
-        </div>
+        <div data-reveal style="--i:0"><dt>One point of contact</dt><dd>You deal with Noor, on his mobile, from the first call to the closing table.</dd></div>
+        <div data-reveal style="--i:1"><dt>The contract, explained</dt><dd>He walks you through each section before you sign anything.</dd></div>
+        <div data-reveal style="--i:2"><dt>Pricing you can check</dt><dd>Every price comes with the recent sales it rests on.</dd></div>
+        <div data-reveal style="--i:3"><dt>Updates by call or text</dt><dd>You choose how you hear from him when something changes.</dd></div>
       </dl>
     </div>
   </section>
 
-  <section class="section section--band">
-    <div class="container split split--flip">
-      <div class="split__visual">
-        <figure class="print print--square">
-          <div class="print__frame" data-slot="portrait" data-alt="Studio portrait of Noor Rahman">
-            <img src="images/noor-headshot.jpg" srcset="images/noor-headshot-640.jpg 640w, images/noor-headshot.jpg 1312w" sizes="(min-width: 60rem) 45vw, 90vw" width="1312" height="1199" alt="Studio portrait of Noor Rahman in a navy suit" style="object-position: 50% 30%" loading="lazy">
-          </div>
-          <figcaption class="print__label">Noor Rahman <span>Keller Williams</span></figcaption>
-        </figure>
-      </div>
-      <div class="split__text">
-        <h2>Who you will work with</h2>
-        <p>Noor works with buyers, sellers and investors across Denver metro, in Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch and Denver.</p>
-        <p><span class="fill" data-fill="story">Noor’s own story goes here once he sends it.</span></p>
-        <a class="link" href="communities.html">See the communities he covers</a>
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
-      <div class="head">
-        <h2>License and affiliations</h2>
+      <p class="display" data-reveal>You should know who is on <em>your side</em> of the table.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container split" style="align-items: end">
+      <div class="split__text">
+        <p class="label" data-reveal>License and affiliations</p>
+        <h2 class="lines"><span><span style="--l:0">Licensed, and</span></span><span><span style="--l:1">held to a code.</span></span></h2>
+        <ul class="creds" data-reveal>
+          <li><span>Associate Broker</span><span>Colorado</span></li>
+          <li><span>REALTOR®</span><span>Member</span></li>
+          <li><span>Brokerage</span><span>Keller Williams</span></li>
+        </ul>
       </div>
-      <ul class="rows rows--tight">
-        <li data-reveal style="--i:0">
-          <h3>Associate Broker</h3>
-          <p>Licensed in Colorado to represent buyers and sellers of real estate.</p>
-        </li>
-        <li data-reveal style="--i:1">
-          <h3>REALTOR®</h3>
-          <p>A member of the National Association of REALTORS®, which holds its members to a code of ethics.</p>
-        </li>
-        <li data-reveal style="--i:2">
-          <h3>Keller Williams</h3>
-          <p>The brokerage Noor works with. Each office is independently owned and operated.</p>
-        </li>
-      </ul>
+      <div class="split__media">
+        <div class="note" data-reveal style="display: grid; gap: var(--s-4)">
+          <p>An associate broker is licensed in Colorado to represent buyers and sellers of real estate.</p>
+          <p>REALTORS® are members of the National Association of REALTORS®, which holds its members to a code of ethics.</p>
+          <p>Keller Williams is the brokerage Noor works with. Each office is independently owned and operated.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section section--l section--band">
-    <div class="container">
-      <p class="statement">You should know who is on your side of the table.</p>
-    </div>
-  </section>
-
-  <section class="section section--ink">
-    <div class="container close">
-      <h2>Talk to Noor about your next move</h2>
-      <ul class="close__lines">
-        <li><a class="link" href="tel:+13035978413">(303) 597-8413</a></li>
-        <li><a class="link" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a></li>
-        <li><small>This is Noor’s mobile number.</small></li>
-      </ul>
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="hero__media" data-parallax="0.12"><img src="images/house-hero.jpg" srcset="images/house-hero-960.jpg 960w, images/house-hero.jpg 2400w" sizes="100vw" width="2400" height="1340" alt="" loading="lazy"></div>
+    <div class="container cta__inner">
+      <p class="label">Your next move</p>
+      <h2 class="lines" id="cta-title"><span><span style="--l:0">Talk to Noor about</span></span><span><span style="--l:1">your next move.</span></span></h2>
+      <div class="cta__lines" data-reveal>
+        <a class="big" href="tel:+13035978413">(303) 597-8413</a>
+        <a class="big" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a>
+        <small>Call or text Noor’s mobile.</small>
+      </div>
     </div>
   </section>
 
@@ -144,24 +151,40 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="footer__mark">Noor Rahman</p>
-    <ul class="footer__links">
-      <li><a href="buy.html">Buy</a></li>
-      <li><a href="sell.html">Sell</a></li>
-      <li><a href="invest.html">Invest</a></li>
-      <li><a href="communities.html">Communities</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="footer__top">
+      <div class="footer__col">
+        <h2>Let’s find your next address.</h2>
+        <a class="link" href="contact.html">Get in touch</a>
+      </div>
+      <div class="footer__col">
+        <p class="label label--plain">Pages</p>
+        <ul>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="sell.html">Sell</a></li>
+          <li><a href="invest.html">Invest</a></li>
+          <li><a href="communities.html">Communities</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="label label--plain">Contact</p>
+        <ul>
+          <li><a href="tel:+13035978413">(303) 597-8413</a></li>
+          <li><a href="mailto:contact@noorrahman.com">contact@noorrahman.com</a></li>
+          <li><a href="https://www.facebook.com/p/Noor-Rahman-100069390858541/">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__mark" aria-hidden="true">Noor Rahman</p>
     <div class="footer__legal">
-      <p>Noor Rahman, Associate Broker, REALTOR®. Licensed in Colorado. Keller Williams, <span class="fill" data-fill="brokerage">office name and address to be confirmed</span>.</p>
-      <p>Each office is independently owned and operated. Equal Housing Opportunity.</p>
+      <p>Noor Rahman, Associate Broker, REALTOR®. Licensed in Colorado. Keller Williams, <span class="fill">office name and address to be confirmed</span>. Each office is independently owned and operated. Equal Housing Opportunity.</p>
+      <p>House and interior photographs on this site are illustrative and are not listings. Design by Laar Digital.</p>
     </div>
   </div>
 </footer>
 
-<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
-document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
-<script src="js/site.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
