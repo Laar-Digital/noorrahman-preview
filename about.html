@@ -7,9 +7,9 @@
 <meta name="description" content="Noor Rahman is a Colorado associate broker and REALTOR® with Keller Williams who works with buyers, sellers and investors across Denver metro.">
 <meta name="theme-color" content="#121110">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/noor-overlook.jpg" imagesrcset="images/noor-overlook-640.jpg 640w, images/noor-overlook.jpg 1122w" imagesizes="100vw">
 <link rel="stylesheet" href="css/main.css">
 </head>
@@ -65,8 +65,8 @@
     <div class="container page-hero__inner">
       <div class="page-hero__text">
         <p class="label" data-reveal>About Noor</p>
-        <h1 class="lines" id="hero-title"><span><span style="--l:0">One broker, from</span></span><span><span style="--l:1">first call to closing.</span></span></h1>
-        <p class="lead" data-reveal style="--i:3">Noor Rahman is a Colorado associate broker and REALTOR® with Keller Williams.</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">Know who’s</span></span><span><span style="--l:1">on your side.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">One broker, from first call to closing.</p>
         <div class="hero__actions" data-reveal style="--i:4">
           <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
           <a class="link link--light" href="contact.html#write">Write to Noor</a>
@@ -75,62 +75,49 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" aria-labelledby="meet-title">
     <div class="container meet">
       <div class="meet__media">
         <div class="frame frame--tall" data-clip><img src="images/noor-casual.jpg" srcset="images/noor-casual-640.jpg 640w, images/noor-casual.jpg 1199w" sizes="(min-width: 64rem) 36vw, 80vw" width="1199" height="1312" alt="Noor Rahman in a blue shirt outdoors in golden evening light" loading="lazy" style="object-position: 50% 25%"></div>
         <div class="frame frame--square meet__float" data-reveal style="--i:2"><img src="images/noor-headshot-640.jpg" width="640" height="585" alt="" loading="lazy" style="object-position: 50% 30%"></div>
       </div>
       <div class="meet__text">
-        <p class="label" data-reveal>Who you will work with</p>
-        <h2 class="lines"><span><span style="--l:0">The broker on</span></span><span><span style="--l:1">your side.</span></span></h2>
-        <p data-reveal>Noor works with buyers, sellers and investors across Denver metro, in Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch and Denver.</p>
+        <p class="label" data-reveal>Meet Noor</p>
+        <h2 class="lines" id="meet-title"><span><span style="--l:0">The broker</span></span><span><span style="--l:1">you’ll work with.</span></span></h2>
+        <p data-reveal>Colorado associate broker and REALTOR® with Keller Williams.</p>
         <p data-reveal><span class="fill">Noor’s own story goes here once he sends it.</span></p>
-        <a class="link" href="communities.html" data-reveal>See the communities he covers</a>
+        <a class="link" href="communities.html" data-reveal>See the six communities</a>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt" aria-labelledby="trust-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>Credentials</p>
+        <h2 class="lines" id="trust-title"><span><span style="--l:0">Licensed. Named.</span></span><span><span style="--l:1">Accountable.</span></span></h2>
+      </div>
+      <div class="trust">
+        <div data-reveal style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><strong>Licensed in Colorado</strong><span>Associate broker</span></div>
+        <div data-reveal style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13l-1.5 8 5-3 5 3-1.5-8"/></svg><strong>REALTOR®</strong><span>Bound by the NAR Code of Ethics</span></div>
+        <div data-reveal style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><strong>Keller Williams</strong><span>Brokerage backing</span></div>
+        <div data-reveal style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>One point of contact</strong><span>Noor, first call to closing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-title">
     <div class="container">
       <div class="section-head">
         <p class="label" data-reveal>How Noor works</p>
-        <h2 class="lines"><span><span style="--l:0">Four habits you</span></span><span><span style="--l:1">can hold him to.</span></span></h2>
-        <p class="lead" data-reveal>The same way of working whether you are buying, selling or investing.</p>
+        <h2 class="lines" id="how-title"><span><span style="--l:0">Four habits to</span></span><span><span style="--l:1">hold him to.</span></span></h2>
       </div>
-      <dl class="facts">
-        <div data-reveal style="--i:0"><dt>One point of contact</dt><dd>You deal with Noor, on his mobile, from the first call to the closing table.</dd></div>
-        <div data-reveal style="--i:1"><dt>The contract, explained</dt><dd>He walks you through each section before you sign anything.</dd></div>
-        <div data-reveal style="--i:2"><dt>Pricing you can check</dt><dd>Every price comes with the recent sales it rests on.</dd></div>
-        <div data-reveal style="--i:3"><dt>Updates by call or text</dt><dd>You choose how you hear from him when something changes.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <p class="display" data-reveal>You should know who is on <em>your side</em> of the table.</p>
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container split" style="align-items: end">
-      <div class="split__text">
-        <p class="label" data-reveal>License and affiliations</p>
-        <h2 class="lines"><span><span style="--l:0">Licensed, and</span></span><span><span style="--l:1">held to a code.</span></span></h2>
-        <ul class="creds" data-reveal>
-          <li><span>Associate Broker</span><span>Colorado</span></li>
-          <li><span>REALTOR®</span><span>Member</span></li>
-          <li><span>Brokerage</span><span>Keller Williams</span></li>
-        </ul>
-      </div>
-      <div class="split__media">
-        <div class="note" data-reveal style="display: grid; gap: var(--s-4)">
-          <p>An associate broker is licensed in Colorado to represent buyers and sellers of real estate.</p>
-          <p>REALTORS® are members of the National Association of REALTORS®, which holds its members to a code of ethics.</p>
-          <p>Keller Williams is the brokerage Noor works with. Each office is independently owned and operated.</p>
-        </div>
-      </div>
+      <ol class="path__steps" style="grid-column: 1 / -1" data-reveal>
+        <li><strong>One point of contact</strong><span>Noor’s mobile, start to finish.</span></li>
+        <li><strong>The contract, explained</strong><span>Every section walked through before you sign.</span></li>
+        <li><strong>Pricing you can check</strong><span>Each price shown with the sales behind it.</span></li>
+        <li><strong>Updates by call or text</strong><span>You pick how you hear from him.</span></li>
+      </ol>
     </div>
   </section>
 
@@ -138,7 +125,7 @@
     <div class="hero__media" data-parallax="0.12"><img src="images/house-hero.jpg" srcset="images/house-hero-960.jpg 960w, images/house-hero.jpg 2400w" sizes="100vw" width="2400" height="1340" alt="" loading="lazy"></div>
     <div class="container cta__inner">
       <p class="label">Your next move</p>
-      <h2 class="lines" id="cta-title"><span><span style="--l:0">Talk to Noor about</span></span><span><span style="--l:1">your next move.</span></span></h2>
+      <h2 class="lines" id="cta-title"><span><span style="--l:0">Start with</span></span><span><span style="--l:1">a conversation.</span></span></h2>
       <div class="cta__lines" data-reveal>
         <a class="big" href="tel:+13035978413">(303) 597-8413</a>
         <a class="big" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a>

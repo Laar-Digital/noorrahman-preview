@@ -7,9 +7,9 @@
 <meta name="description" content="How buying a home works with Noor Rahman, associate broker with Keller Williams: budget and pre-approval, search and tours, offer and negotiation, inspection to closing across Denver metro.">
 <meta name="theme-color" content="#121110">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/house-farmhouse.jpg" imagesrcset="images/house-farmhouse-960.jpg 960w, images/house-farmhouse.jpg 1856w" imagesizes="100vw">
 <link rel="stylesheet" href="css/main.css">
 </head>
@@ -65,103 +65,148 @@
     <div class="container page-hero__inner">
       <div class="page-hero__text">
         <p class="label" data-reveal>Buying in Denver metro</p>
-        <h1 class="lines" id="hero-title"><span><span style="--l:0">Buy with someone</span></span><span><span style="--l:1">who reads every line.</span></span></h1>
-        <p class="lead" data-reveal style="--i:3">Noor walks you from the first budget talk to the closing table.</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">Buy with</span></span><span><span style="--l:1">your eyes open.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">Four steps. Every line explained.</p>
         <div class="hero__actions" data-reveal style="--i:4">
-          <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
-          <a class="link link--light" href="#steps">See the four steps</a>
+          <a class="btn btn--light" href="#estimator">Estimate a payment</a>
+          <a class="link link--light" href="tel:+13035978413">(303) 597-8413</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container intro">
-      <p class="scrub">Read the contract before you fall for the kitchen. Noor explains price, dates and contingencies in plain words before you sign anything.</p>
-      <div class="intro__side" data-reveal>
-        <p class="label label--plain">Noor Rahman, REALTOR®</p>
-        <p>An associate broker with Keller Williams, working with buyers from Centennial to Westminster.</p>
-        <a class="link" href="communities.html">See the communities</a>
-      </div>
+  <nav class="jump" aria-label="On this page">
+    <div class="container">
+      <ul>
+        <li><a href="#steps">Steps</a></li>
+        <li><a href="#estimator">Payment estimator</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#team">Who is involved</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <section class="section section--alt" id="steps">
+  <section class="section" id="steps" aria-labelledby="steps-title">
     <div class="container">
       <div class="section-head">
         <p class="label" data-reveal>How buying works</p>
-        <h2 class="lines"><span><span style="--l:0">Four steps</span></span><span><span style="--l:1">to the keys.</span></span></h2>
-        <p class="lead" data-reveal>Each step has a clear owner, and Noor keeps the next one in view.</p>
+        <h2 class="lines" id="steps-title"><span><span style="--l:0">Four steps</span></span><span><span style="--l:1">to the keys.</span></span></h2>
       </div>
-      <ol class="steps">
-        <li data-reveal style="--i:0"><h3>Budget and lender</h3><p>Agree a budget, then get a lender’s pre-approval so your offer carries weight.</p></li>
-        <li data-reveal style="--i:1"><h3>Search and tours</h3><p>Noor sets up the search and books showings around your week.</p></li>
-        <li data-reveal style="--i:2"><h3>Offer and negotiation</h3><p>He drafts the offer and negotiates price and terms with the seller’s side.</p></li>
-        <li data-reveal style="--i:3"><h3>Inspection to closing</h3><p>Inspection, appraisal and title deadlines tracked until you sign.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container split">
-      <div class="split__text">
-        <p class="label" data-reveal>On a tour</p>
-        <h2 class="lines"><span><span style="--l:0">A second</span></span><span><span style="--l:1">pair of eyes.</span></span></h2>
-        <p data-reveal>Noor points out what listing photos leave out: the slope of the lot, the age of the roof, the road behind the fence.</p>
-        <p data-reveal>You see the house as it is before you decide what to offer.</p>
-        <a class="btn" href="tel:+13035978413" data-reveal>Book a tour with Noor <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="split__media">
-        <div class="frame frame--tall" data-clip><img src="images/noor-walking.jpg" srcset="images/noor-walking-640.jpg 640w, images/noor-walking.jpg 1122w" sizes="(min-width: 64rem) 42vw, 100vw" width="1122" height="1402" alt="Noor Rahman walking along a residential street with house plans" loading="lazy" style="object-position: 50% 15%"></div>
+      <div class="path">
+        <ol class="path__steps" data-reveal>
+          <li><strong>Budget and pre-approval</strong><span>Know your number before you tour.</span></li>
+          <li><strong>Search and tour</strong><span>Shortlist, then walk the homes together.</span></li>
+          <li><strong>Offer and negotiate</strong><span>Price and terms, explained line by line.</span></li>
+          <li><strong>Inspect and close</strong><span>Every deadline tracked to the keys.</span></li>
+        </ol>
+        <div class="path__side" data-reveal style="--i:1">
+          <p class="label label--plain">Follow along</p>
+          <a class="tool-link" href="#estimator"><strong>Payment estimator</strong><span>Monthly cost in seconds</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="tool-link" href="#checklist"><strong>Buyer checklist</strong><span>Track what is done</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt" id="estimator" aria-labelledby="est-title">
     <div class="container">
       <div class="section-head">
-        <p class="label" data-reveal>Who else is involved</p>
-        <h2 class="lines"><span><span style="--l:0">You choose them.</span></span><span><span style="--l:1">Noor keeps them in step.</span></span></h2>
-        <p class="lead" data-reveal>Four other parties work on a purchase. Here is what each one does.</p>
+        <p class="label" data-reveal>Tool</p>
+        <h2 class="lines" id="est-title"><span><span style="--l:0">What would it</span></span><span><span style="--l:1">cost a month?</span></span></h2>
+        <p class="lead" data-reveal>Move the sliders. Use your lender’s rate.</p>
+      </div>
+      <div class="calc" data-calc="mortgage" data-reveal>
+        <div class="calc__inputs">
+          <div class="range"><div class="range__top"><label for="m-price">Home price</label><output for="m-price"></output></div><input id="m-price" name="price" type="range" min="200000" max="2000000" step="5000" value="600000" data-fmt="usd"></div>
+          <div class="range"><div class="range__top"><label for="m-down">Down payment</label><output for="m-down"></output></div><input id="m-down" name="down" type="range" min="0" max="50" step="1" value="20" data-fmt="pct"></div>
+          <div class="range"><div class="range__top"><label for="m-rate">Interest rate</label><output for="m-rate"></output></div><input id="m-rate" name="rate" type="range" min="2" max="10" step="0.125" value="6.5" data-fmt="pct"></div>
+          <div class="range"><div class="range__top"><label for="m-years">Loan term</label><output for="m-years"></output></div><input id="m-years" name="years" type="range" min="10" max="30" step="5" value="30" data-fmt="yrs"></div>
+        </div>
+        <div class="calc__out" aria-live="polite">
+          <p class="calc__unit">Principal and interest, per month</p>
+          <p class="calc__big" data-out="payment">$0</p>
+          <ul class="calc__rows">
+            <li><span>Down payment</span><span data-out="down">$0</span></li>
+            <li><span>Loan amount</span><span data-out="loan">$0</span></li>
+            <li><span>Total interest</span><span data-out="interest">$0</span></li>
+          </ul>
+          <p class="calc__note">An estimate only. It leaves out property tax, insurance, HOA dues and mortgage insurance. The starting rate is an example, not a quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="checklist" aria-labelledby="check-title">
+    <div class="container split">
+      <div class="split__text">
+        <p class="label" data-reveal>Your checklist</p>
+        <h2 class="lines" id="check-title"><span><span style="--l:0">Tick it off</span></span><span><span style="--l:1">as you go.</span></span></h2>
+        <p data-reveal>Saved in this browser only. Nothing is sent.</p>
+      </div>
+      <div class="split__media">
+        <div class="checklist" data-checklist="buyer" data-reveal>
+          <div class="checklist__head"><h3>Buyer checklist</h3><span class="checklist__count" data-count>0 of 6 done</span></div>
+          <div class="progress" aria-hidden="true"><i></i></div>
+          <ul>
+            <li><label><input type="checkbox"><span><strong>Talk to a lender</strong><small>Ask what you can borrow.</small></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Get pre-approved</strong><small>A letter to send with offers.</small></span></label></li>
+            <li><label><input type="checkbox"><span><strong>List your must-haves</strong><small>Rooms, yard, commute, deal-breakers.</small></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Choose areas</strong><small>Compare them in the <a class="link" href="communities.html#finder">community finder</a>.</small></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Tour with Noor</strong><small>Walk the shortlist together.</small></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Plan inspection and closing costs</strong><small>Set money aside for both.</small></span></label></li>
+          </ul>
+          <button class="checklist__reset" type="button">Clear the list</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>Who is involved</p>
+        <h2 class="lines" id="team-title"><span><span style="--l:0">Four more people.</span></span><span><span style="--l:1">One timeline.</span></span></h2>
       </div>
       <table class="table" data-reveal>
         <thead>
-          <tr><th scope="col">Who</th><th scope="col">What they do</th><th scope="col">When</th></tr>
+          <tr><th scope="col">Who</th><th scope="col">What they do</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">Lender</th><td>Reviews your finances and funds the loan.</td><td>Before the search, then through closing</td></tr>
-          <tr><th scope="row">Inspector</th><td>Checks the structure, roof and systems.</td><td>After your offer is accepted</td></tr>
-          <tr><th scope="row">Appraiser</th><td>Gives the lender an independent opinion of value.</td><td>While the loan is processed</td></tr>
-          <tr><th scope="row">Title company</th><td>Checks ownership records and runs the closing.</td><td>From contract to keys</td></tr>
+          <tr><th scope="row">Lender</th><td>Approves and funds your home loan.</td></tr>
+          <tr><th scope="row">Inspector</th><td>Checks structure, roof and home systems.</td></tr>
+          <tr><th scope="row">Appraiser</th><td>Gives the lender an independent value.</td></tr>
+          <tr><th scope="row">Title company</th><td>Checks ownership records and runs closing.</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="label" data-reveal>What Noor handles</p>
-        <h2 class="lines"><span><span style="--l:0">His part,</span></span><span><span style="--l:1">step by step.</span></span></h2>
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="faq-head">
+        <p class="label" data-reveal>Questions</p>
+        <h2 class="lines" id="faq-title"><span><span style="--l:0">Good to</span></span><span><span style="--l:1">know first.</span></span></h2>
+        <a class="link" href="contact.html" data-reveal>Ask your own</a>
       </div>
-      <dl class="facts">
-        <div data-reveal style="--i:0"><dt>Before the search</dt><dd>A first conversation about budget, timing and the kind of property you want.</dd></div>
-        <div data-reveal style="--i:1"><dt>On the search</dt><dd>Listings sent as they come up, and showings booked around your week.</dd></div>
-        <div data-reveal style="--i:2"><dt>At the offer</dt><dd>Price, dates and contingencies explained in plain words before you sign.</dd></div>
-        <div data-reveal style="--i:3"><dt>Under contract</dt><dd>Deadlines watched, and the inspection report read with you.</dd></div>
-      </dl>
+      <div class="faq" data-reveal>
+        <details><summary>Do I need a pre-approval before touring?</summary><div><p>Sellers usually expect one with an offer. Talk to a lender early.</p></div></details>
+        <details><summary>What is earnest money?</summary><div><p>A good-faith deposit made once your offer is accepted. It is normally applied to your costs at closing.</p></div></details>
+        <details><summary>Can I ask for repairs after the inspection?</summary><div><p>Yes, by the inspection deadline in your contract. Noor can walk you through it.</p></div></details>
+        <details><summary>What are closing costs?</summary><div><p>Loan, title and recording fees paid at closing. Your lender lists them in a Loan Estimate.</p></div></details>
+      </div>
     </div>
   </section>
 
   <section class="cta" aria-labelledby="cta-title">
     <div class="hero__media" data-parallax="0.12"><img src="images/interior-kitchen.jpg" srcset="images/interior-kitchen-960.jpg 960w, images/interior-kitchen.jpg 1856w" sizes="100vw" width="1856" height="2304" alt="" loading="lazy"></div>
     <div class="container cta__inner">
-      <p class="label">Ready to look</p>
-      <h2 class="lines" id="cta-title"><span><span style="--l:0">Let’s talk about</span></span><span><span style="--l:1">the home you want.</span></span></h2>
+      <p class="label">Your next move</p>
+      <h2 class="lines" id="cta-title"><span><span style="--l:0">Ready when</span></span><span><span style="--l:1">you are.</span></span></h2>
       <div class="cta__lines" data-reveal>
         <a class="big" href="tel:+13035978413">(303) 597-8413</a>
         <a class="big" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a>
-        <small>Call or text Noor’s mobile.</small>
+        <small>Call or text Noor.</small>
       </div>
     </div>
   </section>

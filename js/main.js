@@ -22,6 +22,7 @@
     header.classList.toggle('is-solid', y > 40);
     if (!header.classList.contains('menu-open')) header.classList.toggle('is-hidden', y > 640 && y > lastY + 2);
     if (y < lastY - 2) header.classList.remove('is-hidden');
+    root.classList.toggle('has-hidden-header', header.classList.contains('is-hidden'));
     lastY = y;
   };
 
@@ -144,6 +145,117 @@
       b.setAttribute('aria-pressed', String(p));
     });
   });
+
+  /* Tabs: the guide that switches a path (arrow keys move between tabs) */
+  document.querySelectorAll('[data-tabs]').forEach((wrap) => {
+    const tabs = [...wrap.querySelectorAll('[role="tab"]')];
+    const show = (tab, focus) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        const panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) { panel.hidden = !on; panel.classList.toggle('is-shown', on); }
+      });
+      if (focus) tab.focus();
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(t));
+      t.addEventListener('keydown', (e) => {
+        const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (k) { e.preventDefault(); show(tabs[(i + k + tabs.length) % tabs.length], true); }
+        if (e.key === 'Home') { e.preventDefault(); show(tabs[0], true); }
+        if (e.key === 'End') { e.preventDefault(); show(tabs[tabs.length - 1], true); }
+      });
+    });
+    const start = tabs.find((t) => location.hash && t.dataset.hash === location.hash.slice(1)) || tabs[0];
+    show(start);
+  });
+
+  /* Calculators: every input with data-fmt shows its value in its <output> */
+  const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  const fmt = (v, f) => (f === 'usd' ? usd.format(v) : f === 'pct' ? `${v}%` : f === 'yrs' ? `${v} years` : String(v));
+  document.querySelectorAll('[data-calc]').forEach((calc) => {
+    const val = (n) => Number(calc.querySelector(`[name="${n}"]`)?.value || 0);
+    const put = (k, v) => calc.querySelectorAll(`[data-out="${k}"]`).forEach((o) => { o.textContent = v; });
+    const run = () => {
+      calc.querySelectorAll('input[data-fmt]').forEach((i) => {
+        const o = calc.querySelector(`output[for="${i.id}"]`);
+        if (o) o.textContent = fmt(Number(i.value), i.dataset.fmt);
+      });
+      if (calc.dataset.calc === 'mortgage') {
+        const price = val('price'); const down = price * val('down') / 100; const loan = price - down;
+        const r = val('rate') / 100 / 12; const n = val('years') * 12;
+        const pay = r ? loan * r / (1 - Math.pow(1 + r, -n)) : loan / n;
+        put('payment', usd.format(pay)); put('loan', usd.format(loan)); put('down', usd.format(down));
+        put('interest', usd.format(pay * n - loan));
+      }
+      if (calc.dataset.calc === 'rental') {
+        const rent = val('rent'); const vac = rent * val('vacancy') / 100; const upkeep = rent * val('upkeep') / 100;
+        const costs = val('payment') + val('taxins') + val('hoa') + vac + upkeep;
+        const flow = rent - costs;
+        put('costs', usd.format(costs)); put('cashflow', usd.format(flow)); put('yearly', usd.format(flow * 12));
+        calc.querySelectorAll('[data-out="cashflow"]').forEach((o) => o.classList.toggle('is-neg', flow < 0));
+      }
+    };
+    calc.addEventListener('input', run);
+    run();
+  });
+
+  /* Checklists: progress, saved in this browser only */
+  document.querySelectorAll('[data-checklist]').forEach((list) => {
+    const key = `nr-check-${list.dataset.checklist}`;
+    const boxes = [...list.querySelectorAll('input[type="checkbox"]')];
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
+    boxes.forEach((b, i) => { b.checked = saved.includes(i); });
+    const sync = () => {
+      const done = boxes.filter((b) => b.checked).length;
+      list.querySelector('[data-count]').textContent = `${done} of ${boxes.length} done`;
+      list.querySelector('.progress')?.style.setProperty('--p', boxes.length ? done / boxes.length : 0);
+      try { localStorage.setItem(key, JSON.stringify(boxes.map((b, i) => (b.checked ? i : -1)).filter((i) => i >= 0))); } catch (e) {}
+    };
+    list.addEventListener('change', sync);
+    list.querySelector('.checklist__reset')?.addEventListener('click', () => { boxes.forEach((b) => { b.checked = false; }); sync(); });
+    sync();
+  });
+
+  /* Community finder: chips filter cards (a card must have every chosen tag) */
+  document.querySelectorAll('[data-finder]').forEach((finder) => {
+    const chips = [...finder.querySelectorAll('[data-tag]')];
+    const cards = [...finder.querySelectorAll('[data-tags]')];
+    const count = finder.querySelector('.finder__count');
+    const empty = finder.querySelector('.finder__empty');
+    const run = () => {
+      const want = chips.filter((c) => c.getAttribute('aria-pressed') === 'true').map((c) => c.dataset.tag);
+      let shown = 0;
+      cards.forEach((card) => {
+        const has = card.dataset.tags.split(' ');
+        const ok = want.every((w) => has.includes(w));
+        card.classList.toggle('is-out', !ok);
+        if (ok) shown += 1;
+      });
+      if (count) count.textContent = want.length ? `${shown} of ${cards.length} communities match` : `All ${cards.length} communities`;
+      if (empty) empty.hidden = shown > 0;
+    };
+    chips.forEach((c) => c.addEventListener('click', () => {
+      c.setAttribute('aria-pressed', String(c.getAttribute('aria-pressed') !== 'true'));
+      run();
+    }));
+    finder.querySelector('[data-clear]')?.addEventListener('click', () => { chips.forEach((c) => c.setAttribute('aria-pressed', 'false')); run(); });
+    run();
+  });
+
+  /* Jump bar: marks the section in view */
+  const jump = document.querySelector('.jump');
+  if (jump) {
+    const links = [...jump.querySelectorAll('a[href^="#"]')];
+    const jio = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      links.forEach((l) => l.classList.toggle('is-current', l.getAttribute('href') === `#${e.target.id}`));
+    }), { rootMargin: '-40% 0px -55% 0px' });
+    links.forEach((l) => { const t = document.querySelector(l.getAttribute('href')); if (t) jio.observe(t); });
+  }
 
   /* Forms: validate, and say plainly that nothing was sent until an endpoint exists */
   document.querySelectorAll('form[data-endpoint]').forEach((form) => {

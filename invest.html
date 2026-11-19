@@ -7,9 +7,9 @@
 <meta name="description" content="Noor Rahman, associate broker with Keller Williams, checks comparable sales and rents, condition, HOA and rental rules, and financing before you offer on investment property across Denver metro.">
 <meta name="theme-color" content="#121110">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/house-townhomes.jpg" imagesrcset="images/house-townhomes-960.jpg 960w, images/house-townhomes.jpg 1856w" imagesizes="100vw">
 <link rel="stylesheet" href="css/main.css">
 </head>
@@ -65,87 +65,123 @@
     <div class="container page-hero__inner">
       <div class="page-hero__text">
         <p class="label" data-reveal>Investing in Denver metro</p>
-        <h1 class="lines" id="hero-title"><span><span style="--l:0">Property, checked</span></span><span><span style="--l:1">before you offer.</span></span></h1>
-        <p class="lead" data-reveal style="--i:3">Noor weighs rental and resale property on its numbers first.</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">Numbers first.</span></span><span><span style="--l:1">Then the offer.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">Rental and resale property, checked before you commit.</p>
         <div class="hero__actions" data-reveal style="--i:4">
-          <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
-          <a class="link link--light" href="#checks">See what Noor checks</a>
+          <a class="btn btn--light" href="#cashflow">Run the numbers</a>
+          <a class="link link--light" href="tel:+13035978413">(303) 597-8413</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container intro">
-      <p class="scrub">A property has to work on paper before it works for you. Noor writes up the numbers first, so you offer with your eyes open.</p>
-      <div class="intro__side" data-reveal>
-        <p class="label label--plain">Rental and resale</p>
-        <p>Single homes, townhomes, condos and small multi-unit buildings across Denver metro.</p>
-        <a class="link" href="communities.html">See the communities</a>
+  <nav class="jump" aria-label="On this page">
+    <div class="container">
+      <ul>
+        <li><a href="#steps">Steps</a></li>
+        <li><a href="#cashflow">Cash-flow estimator</a></li>
+        <li><a href="#checks">What Noor checks</a></li>
+        <li><a href="#types">Property types</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" id="steps" aria-labelledby="steps-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>How investing works</p>
+        <h2 class="lines" id="steps-title"><span><span style="--l:0">From the goal</span></span><span><span style="--l:1">to the keys.</span></span></h2>
+      </div>
+      <div class="path">
+        <ol class="path__steps" data-reveal>
+          <li><strong>Set the goal</strong><span>Rent it out, or fix and resell.</span></li>
+          <li><strong>Run the numbers</strong><span>Rent, costs and cash flow first.</span></li>
+          <li><strong>Check the property</strong><span>Condition, HOA and rental rules.</span></li>
+          <li><strong>Offer and close</strong><span>Terms that fit the plan.</span></li>
+        </ol>
+        <div class="path__side" data-reveal style="--i:1">
+          <p class="label label--plain">Follow along</p>
+          <a class="tool-link" href="#cashflow"><strong>Rental cash-flow estimator</strong><span>Rent in, costs out</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="tool-link" href="communities.html#finder"><strong>Community finder</strong><span>Filter by rail, trails, water</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="checks">
+  <section class="section section--alt" id="cashflow" aria-labelledby="cash-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>Tool</p>
+        <h2 class="lines" id="cash-title"><span><span style="--l:0">Will it</span></span><span><span style="--l:1">pay its way?</span></span></h2>
+        <p class="lead" data-reveal>Move the sliders. Use real quotes.</p>
+      </div>
+      <div class="calc" data-calc="rental" data-reveal>
+        <div class="calc__inputs">
+          <div class="range"><div class="range__top"><label for="r-rent">Monthly rent</label><output for="r-rent"></output></div><input id="r-rent" name="rent" type="range" min="1000" max="8000" step="50" value="2800" data-fmt="usd"></div>
+          <div class="range"><div class="range__top"><label for="r-pay">Mortgage payment</label><output for="r-pay"></output></div><input id="r-pay" name="payment" type="range" min="0" max="6000" step="50" value="1900" data-fmt="usd"></div>
+          <div class="range"><div class="range__top"><label for="r-tax">Property tax and insurance</label><output for="r-tax"></output></div><input id="r-tax" name="taxins" type="range" min="0" max="1500" step="10" value="300" data-fmt="usd"></div>
+          <div class="range"><div class="range__top"><label for="r-hoa">HOA dues</label><output for="r-hoa"></output></div><input id="r-hoa" name="hoa" type="range" min="0" max="800" step="10" value="0" data-fmt="usd"></div>
+          <div class="range"><div class="range__top"><label for="r-vac">Vacancy allowance</label><output for="r-vac"></output></div><input id="r-vac" name="vacancy" type="range" min="0" max="15" step="1" value="5" data-fmt="pct"></div>
+          <div class="range"><div class="range__top"><label for="r-up">Repairs and upkeep</label><output for="r-up"></output></div><input id="r-up" name="upkeep" type="range" min="0" max="20" step="1" value="8" data-fmt="pct"></div>
+        </div>
+        <div class="calc__out" aria-live="polite">
+          <p class="calc__unit">Estimated cash flow, per month</p>
+          <p class="calc__big" data-out="cashflow">$0</p>
+          <ul class="calc__rows">
+            <li><span>Monthly costs</span><span data-out="costs">$0</span></li>
+            <li><span>Per year</span><span data-out="yearly">$0</span></li>
+          </ul>
+          <p class="calc__note">Sample values. Replace them with real quotes. Brokerage help, not tax, legal or investment advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="checks" aria-labelledby="checks-title">
     <div class="container">
       <div class="section-head">
         <p class="label" data-reveal>Before any offer</p>
-        <h2 class="lines"><span><span style="--l:0">Four checks</span></span><span><span style="--l:1">on every property.</span></span></h2>
-        <p class="lead" data-reveal>Each one is written up so you can read it before you decide.</p>
+        <h2 class="lines" id="checks-title"><span><span style="--l:0">Four checks</span></span><span><span style="--l:1">on every property.</span></span></h2>
       </div>
       <dl class="facts">
-        <div data-reveal style="--i:0"><dt>Comparable sales and rents</dt><dd>Recent sales and asking rents nearby, set beside the price.</dd></div>
-        <div data-reveal style="--i:1"><dt>Condition and repair scope</dt><dd>What the inspection finds, and which repairs come first.</dd></div>
-        <div data-reveal style="--i:2"><dt>HOA and local rental rules</dt><dd>Association documents and the city’s rules on renting, read before you commit.</dd></div>
-        <div data-reveal style="--i:3"><dt>Financing and exit</dt><dd>How you fund the purchase, and how you plan to hold or sell.</dd></div>
+        <div data-reveal style="--i:0"><dt>Sales and rents</dt><dd>Nearby sales and asking rents, beside the price.</dd></div>
+        <div data-reveal style="--i:1"><dt>Condition</dt><dd>What the inspection finds, and what comes first.</dd></div>
+        <div data-reveal style="--i:2"><dt>HOA and rental rules</dt><dd>Read before you commit.</dd></div>
+        <div data-reveal style="--i:3"><dt>Financing and exit</dt><dd>How you fund it, hold it or sell it.</dd></div>
       </dl>
-      <p class="note small" data-reveal style="margin-top: var(--s-7)">Noor provides real estate brokerage services. This is not tax, legal or investment advice; speak to your own advisers about those.</p>
+      <p class="note small" data-reveal style="margin-top: var(--s-7)">Noor provides real estate brokerage help. This is not tax, legal or investment advice.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container split">
-      <div class="split__text">
-        <p class="label" data-reveal>Who you work with</p>
-        <h2 class="lines"><span><span style="--l:0">One broker</span></span><span><span style="--l:1">on the file.</span></span></h2>
-        <p data-reveal>Noor is a Colorado associate broker and REALTOR® with Keller Williams.</p>
-        <p data-reveal>He walks each property with you, reads the association documents with you and writes the offer.</p>
-        <a class="btn" href="about.html" data-reveal>More about Noor <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="split__media">
-        <div class="frame frame--tall" data-clip><img src="images/noor-homes.jpg" srcset="images/noor-homes-640.jpg 640w, images/noor-homes.jpg 1122w" sizes="(min-width: 64rem) 42vw, 100vw" width="1122" height="1402" alt="Noor Rahman with arms crossed in front of a row of stone-fronted homes" loading="lazy" style="object-position: 50% 20%"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt">
+  <section class="section section--alt" id="types" aria-labelledby="types-title">
     <div class="container">
       <div class="section-head">
         <p class="label" data-reveal>Kinds of property</p>
-        <h2 class="lines"><span><span style="--l:0">Four kinds,</span></span><span><span style="--l:1">four sets of checks.</span></span></h2>
+        <h2 class="lines" id="types-title"><span><span style="--l:0">Four kinds,</span></span><span><span style="--l:1">four sets of checks.</span></span></h2>
       </div>
       <ul class="rows">
-        <li data-reveal><h3>Single-family rental</h3><p>A detached house on its own lot, bought to lease.</p><span class="rows__end">To rent</span></li>
-        <li data-reveal><h3>Townhome or condo</h3><p>Shared walls, so the HOA documents come first.</p><span class="rows__end">To rent</span></li>
-        <li data-reveal><h3>Small multi-unit</h3><p>A duplex, triplex or fourplex, with its current leases to review.</p><span class="rows__end">To rent</span></li>
-        <li data-reveal><h3>Fix and resell</h3><p>A house that needs work, priced against finished ones nearby.</p><span class="rows__end">To resell</span></li>
+        <li data-reveal><h3>Single-family</h3><p>A detached house, bought to lease.</p><span class="rows__end">To rent</span></li>
+        <li data-reveal><h3>Townhome or condo</h3><p>Shared walls, so HOA documents first.</p><span class="rows__end">To rent</span></li>
+        <li data-reveal><h3>Small multi-unit</h3><p>Duplex to fourplex, current leases reviewed.</p><span class="rows__end">To rent</span></li>
+        <li data-reveal><h3>Fix and resell</h3><p>Priced against finished homes nearby.</p><span class="rows__end">To resell</span></li>
       </ul>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="label" data-reveal>From first call to closing</p>
-        <h2 class="lines"><span><span style="--l:0">From the goal</span></span><span><span style="--l:1">to the keys.</span></span></h2>
-        <p class="lead" data-reveal>The same four steps, whether you plan to rent or resell.</p>
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="faq-head">
+        <p class="label" data-reveal>Questions</p>
+        <h2 class="lines" id="faq-title"><span><span style="--l:0">Good to</span></span><span><span style="--l:1">know first.</span></span></h2>
+        <a class="link" href="contact.html" data-reveal>Ask your own</a>
       </div>
-      <ol class="steps">
-        <li data-reveal style="--i:0"><h3>Set the goal</h3><p>Rental or resale, and what you can put in.</p></li>
-        <li data-reveal style="--i:1"><h3>Shortlist and tour</h3><p>You walk the properties Noor sends, with him beside you.</p></li>
-        <li data-reveal style="--i:2"><h3>Run the checks</h3><p>Sales, rents, repairs and rules, written up for you to read.</p></li>
-        <li data-reveal style="--i:3"><h3>Offer and close</h3><p>He negotiates the offer and stays on it through closing.</p></li>
-      </ol>
+      <div class="faq" data-reveal>
+        <details><summary>What does cash flow mean here?</summary><div><p>Rent left after the mortgage, tax, insurance, dues and upkeep. The estimator above shows it.</p></div></details>
+        <details><summary>Can I rent out a condo or townhome?</summary><div><p>It depends on the HOA. Its documents may limit rentals, so read them first.</p></div></details>
+        <details><summary>Are short-term rentals allowed?</summary><div><p>Rules and licensing differ by city and HOA. Noor can walk you through it.</p></div></details>
+        <details><summary>Can I buy a home with a tenant in it?</summary><div><p>Yes. Review the current lease before you offer. Noor can walk you through it.</p></div></details>
+      </div>
     </div>
   </section>
 
@@ -153,11 +189,11 @@
     <div class="hero__media" data-parallax="0.12"><img src="images/house-hero.jpg" srcset="images/house-hero-960.jpg 960w, images/house-hero.jpg 2400w" sizes="100vw" width="2400" height="1340" alt="" loading="lazy"></div>
     <div class="container cta__inner">
       <p class="label">Have a property in mind</p>
-      <h2 class="lines" id="cta-title"><span><span style="--l:0">Let’s run the</span></span><span><span style="--l:1">numbers together.</span></span></h2>
+      <h2 class="lines" id="cta-title"><span><span style="--l:0">Let’s run</span></span><span><span style="--l:1">the numbers.</span></span></h2>
       <div class="cta__lines" data-reveal>
         <a class="big" href="tel:+13035978413">(303) 597-8413</a>
         <a class="big" href="mailto:contact@noorrahman.com">contact@noorrahman.com</a>
-        <small>Call or text Noor’s mobile.</small>
+        <small>Call or text Noor.</small>
       </div>
     </div>
   </section>

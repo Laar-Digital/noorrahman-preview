@@ -7,9 +7,9 @@
 <meta name="description" content="Noor Rahman is an associate broker with Keller Williams who helps people buy, sell and invest in homes across Denver metro, Colorado.">
 <meta name="theme-color" content="#121110">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/house-hero.jpg" imagesrcset="images/house-hero-960.jpg 960w, images/house-hero.jpg 2400w" imagesizes="100vw">
 <link rel="stylesheet" href="css/main.css">
 </head>
@@ -66,11 +66,11 @@
     <div class="container hero__inner">
       <div class="hero__text">
         <p class="label" data-reveal>Associate Broker, Keller Williams</p>
-        <h1 class="lines" id="hero-title"><span><span style="--l:0">Find your place</span></span><span><span style="--l:1">in Denver metro.</span></span></h1>
-        <p class="lead" data-reveal style="--i:3">Noor Rahman helps people buy, sell and invest in homes from Centennial to Westminster.</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">Buy. Sell. Invest.</span></span><span><span style="--l:1">One broker.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">Noor Rahman, across Denver metro.</p>
         <div class="hero__actions" data-reveal style="--i:4">
-          <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
-          <a class="link link--light" href="sell.html#valuation">Ask what your home is worth</a>
+          <a class="btn btn--light" href="#start">Start here</a>
+          <a class="link link--light" href="tel:+13035978413">(303) 597-8413</a>
         </div>
       </div>
       <a class="agent-card" href="about.html" data-reveal style="--i:5">
@@ -92,93 +92,122 @@
     <button class="marquee__toggle" type="button" aria-pressed="false">Pause</button>
   </div>
 
-  <section class="section">
-    <div class="container intro">
-      <p class="scrub">A home is the largest thing most people ever buy or sell. Noor keeps every step of it clear, from the first call to the closing table.</p>
-      <div class="intro__side" data-reveal>
-        <p class="label label--plain">Noor Rahman, REALTOR®</p>
-        <p>One associate broker on your file, with the backing of Keller Williams, across six Denver metro communities.</p>
-        <a class="link" href="about.html">Meet Noor</a>
+  <section class="section" id="start" aria-labelledby="start-title">
+    <div class="container guide">
+      <div class="section-head" style="margin-bottom: 0">
+        <p class="label" data-reveal>Start here</p>
+        <h2 class="lines" id="start-title"><span><span style="--l:0">What brings</span></span><span><span style="--l:1">you here?</span></span></h2>
+        <p class="lead" data-reveal>Pick one. See every step, and the tools for it.</p>
       </div>
-    </div>
-  </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-head">
-        <p class="label" data-reveal>What Noor does</p>
-        <h2 class="lines"><span><span style="--l:0">Three ways to</span></span><span><span style="--l:1">work together.</span></span></h2>
-        <p class="lead" data-reveal>Buying, selling or investing, the same broker reads every line with you.</p>
+      <div class="tabs" role="tablist" aria-label="What you want to do" data-tabs data-reveal>
+        <button type="button" role="tab" id="tab-buy" aria-controls="path-buy" aria-selected="true" data-hash="buy">I’m buying</button>
+        <button type="button" role="tab" id="tab-sell" aria-controls="path-sell" aria-selected="false" tabindex="-1" data-hash="sell">I’m selling</button>
+        <button type="button" role="tab" id="tab-invest" aria-controls="path-invest" aria-selected="false" tabindex="-1" data-hash="invest">I’m investing</button>
       </div>
-      <div class="panels">
-        <a class="panel" href="buy.html" data-reveal style="--i:0">
-          <img src="images/house-farmhouse-960.jpg" srcset="images/house-farmhouse-960.jpg 960w, images/house-farmhouse.jpg 1856w" sizes="(min-width: 64rem) 32vw, 100vw" width="960" height="1192" alt="" loading="lazy">
-          <span class="panel__num">01</span>
-          <h3>Buy</h3>
-          <p>Search, tour and offer with someone who explains the contract before you sign.</p>
-          <span class="panel__go">How buying works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="panel" href="sell.html" data-reveal style="--i:1">
-          <img src="images/house-denver-square-960.jpg" srcset="images/house-denver-square-960.jpg 960w, images/house-denver-square.jpg 1856w" sizes="(min-width: 64rem) 32vw, 100vw" width="960" height="1192" alt="" loading="lazy">
-          <span class="panel__num">02</span>
-          <h3>Sell</h3>
-          <p>A price drawn from recent nearby sales, then a plan to bring buyers to the door.</p>
-          <span class="panel__go">How selling works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="panel" href="invest.html" data-reveal style="--i:2">
-          <img src="images/house-townhomes-960.jpg" srcset="images/house-townhomes-960.jpg 960w, images/house-townhomes.jpg 1856w" sizes="(min-width: 64rem) 32vw, 100vw" width="960" height="1192" alt="" loading="lazy">
-          <span class="panel__num">03</span>
-          <h3>Invest</h3>
-          <p>Rental and resale property weighed on its numbers before you commit.</p>
-          <span class="panel__go">How investing works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="label" data-reveal>How it works</p>
-        <h2 class="lines"><span><span style="--l:0">One broker,</span></span><span><span style="--l:1">start to finish.</span></span></h2>
-      </div>
-      <div class="story">
-        <div class="story__media">
-          <div class="story__sticky">
-            <div class="frame">
-              <img src="images/noor-casual.jpg" width="1199" height="1312" alt="Noor Rahman standing in front of a stone house" loading="lazy" style="object-position: 50% 25%">
-              <img src="images/noor-report.jpg" width="1199" height="1312" alt="Noor Rahman reading a property report" loading="lazy" style="object-position: 50% 30%">
-              <img src="images/interior-kitchen.jpg" width="1856" height="2304" alt="A bright modern kitchen with oak cabinets and a dark stone island" loading="lazy">
-              <img src="images/noor-walking.jpg" width="1122" height="1402" alt="Noor Rahman walking along a residential street with house plans" loading="lazy" style="object-position: 50% 15%">
-            </div>
-          </div>
-        </div>
-        <ol class="story__steps">
-          <li data-img="0"><h3>A first conversation</h3><p>What you need, where, and by when. No forms to fill in first, just a call.</p></li>
-          <li data-img="1"><h3>A plan on paper</h3><p>For buyers, a search and a budget with your lender. For sellers, a price range with the sales it rests on.</p></li>
-          <li data-img="2"><h3>Tours, offers, negotiation</h3><p>Noor walks the homes with you and handles the offers and counter-offers.</p></li>
-          <li data-img="3"><h3>Through to closing</h3><p>Inspection, appraisal and title deadlines tracked until the keys change hands.</p></li>
+      <div class="path" id="path-buy" role="tabpanel" aria-labelledby="tab-buy">
+        <ol class="path__steps">
+          <li><strong>Budget and pre-approval</strong><span>Know your number before you tour.</span></li>
+          <li><strong>Search and tour</strong><span>Shortlist, then walk the homes together.</span></li>
+          <li><strong>Offer and negotiate</strong><span>Price and terms, explained line by line.</span></li>
+          <li><strong>Inspect and close</strong><span>Every deadline tracked to the keys.</span></li>
         </ol>
+        <div class="path__side">
+          <p class="label label--plain">Tools for buyers</p>
+          <a class="tool-link" href="buy.html#estimator"><strong>Payment estimator</strong><span>Monthly cost in seconds</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="tool-link" href="buy.html#checklist"><strong>Buyer checklist</strong><span>Track what is done</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--solid" href="buy.html">The buying guide</a>
+        </div>
+      </div>
+
+      <div class="path" id="path-sell" role="tabpanel" aria-labelledby="tab-sell" hidden>
+        <ol class="path__steps">
+          <li><strong>Price from nearby sales</strong><span>A range you can trace to real sales.</span></li>
+          <li><strong>Prepare the home</strong><span>Fix what matters. Skip what does not.</span></li>
+          <li><strong>List and show</strong><span>Photos, listing and showings handled.</span></li>
+          <li><strong>Offers to closing</strong><span>Compared side by side, then seen through.</span></li>
+        </ol>
+        <div class="path__side">
+          <p class="label label--plain">Tools for sellers</p>
+          <a class="tool-link" href="sell.html#valuation"><strong>What is my home worth?</strong><span>Ask for a price range</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="tool-link" href="sell.html#checklist"><strong>Seller checklist</strong><span>Get the home ready</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--solid" href="sell.html">The selling guide</a>
+        </div>
+      </div>
+
+      <div class="path" id="path-invest" role="tabpanel" aria-labelledby="tab-invest" hidden>
+        <ol class="path__steps">
+          <li><strong>Set the goal</strong><span>Rent it out, or fix and resell.</span></li>
+          <li><strong>Run the numbers</strong><span>Rent, costs and cash flow first.</span></li>
+          <li><strong>Check the property</strong><span>Condition, HOA and rental rules.</span></li>
+          <li><strong>Offer and close</strong><span>Terms that fit the plan.</span></li>
+        </ol>
+        <div class="path__side">
+          <p class="label label--plain">Tools for investors</p>
+          <a class="tool-link" href="invest.html#cashflow"><strong>Rental cash-flow estimator</strong><span>Rent in, costs out</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="tool-link" href="communities.html#finder"><strong>Community finder</strong><span>Filter by rail, trails, water</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--solid" href="invest.html">The investing guide</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="hscroll section--alt" aria-labelledby="homes-title">
+  <section class="section section--alt" aria-labelledby="trust-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>Why Noor</p>
+        <h2 class="lines" id="trust-title"><span><span style="--l:0">Licensed. Named.</span></span><span><span style="--l:1">Accountable.</span></span></h2>
+      </div>
+      <div class="trust">
+        <div data-reveal style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><strong>Licensed in Colorado</strong><span>Associate broker</span></div>
+        <div data-reveal style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13l-1.5 8 5-3 5 3-1.5-8"/></svg><strong>REALTOR®</strong><span>Bound by the NAR Code of Ethics</span></div>
+        <div data-reveal style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><strong>Keller Williams</strong><span>Brokerage backing</span></div>
+        <div data-reveal style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>One point of contact</strong><span>Noor, first call to closing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hscroll" aria-labelledby="homes-title">
     <div class="hscroll__pin">
       <div class="container section-head" style="margin-bottom: 0">
         <p class="label">Homes across the metro</p>
-        <h2 id="homes-title">The homes Noor helps people buy and sell.</h2>
-        <p class="small muted">Illustrative images, not current listings.</p>
+        <h2 id="homes-title">Every style, one broker.</h2>
+        <p class="small muted">Illustrative images, not listings.</p>
       </div>
       <div class="hscroll__track">
-        <article class="hcard"><div class="frame"><img src="images/house-hero-960.jpg" width="960" height="536" alt="" loading="lazy" style="object-position: 70% 50%"></div><h3>Mountain modern</h3><p>Stone, timber and tall glass, often on larger lots toward the foothills.</p></article>
-        <article class="hcard"><div class="frame"><img src="images/house-denver-square-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Denver Square</h3><p>Brick, a hipped roof and a deep porch, common in Denver’s older central neighbourhoods.</p></article>
-        <article class="hcard"><div class="frame"><img src="images/house-farmhouse-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Modern farmhouse</h3><p>Board and batten, black windows and a covered porch in newer suburbs.</p></article>
-        <article class="hcard"><div class="frame"><img src="images/house-townhomes-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Townhome</h3><p>Three storeys, little upkeep, close to rail and town centres.</p></article>
-        <article class="hcard"><div class="frame"><img src="images/interior-kitchen-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>The kitchen</h3><p>Often what a buyer remembers after a tour, and what a seller updates first.</p></article>
-        <article class="hcard"><div class="frame"><img src="images/interior-living-960.jpg" width="960" height="644" alt="" loading="lazy"></div><h3>The view</h3><p>West-facing glass and the Front Range on the horizon.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/house-hero-960.jpg" width="960" height="536" alt="" loading="lazy" style="object-position: 70% 50%"></div><h3>Mountain modern</h3><p>Stone, timber, tall glass.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/house-denver-square-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Denver Square</h3><p>Brick, hipped roof, deep porch.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/house-farmhouse-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Modern farmhouse</h3><p>Board and batten, black windows.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/house-townhomes-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>Townhome</h3><p>Low upkeep, close to rail.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/interior-kitchen-960.jpg" width="960" height="1192" alt="" loading="lazy"></div><h3>The kitchen</h3><p>What buyers remember.</p></article>
+        <article class="hcard"><div class="frame"><img src="images/interior-living-960.jpg" width="960" height="644" alt="" loading="lazy"></div><h3>The view</h3><p>The Front Range, framed.</p></article>
       </div>
       <div class="hscroll__bar" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="tools-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="label" data-reveal>Plan ahead</p>
+        <h2 class="lines" id="tools-title"><span><span style="--l:0">Run the numbers</span></span><span><span style="--l:1">before you call.</span></span></h2>
+        <p class="lead" data-reveal>Free tools. No sign-up.</p>
+      </div>
+      <div class="tools">
+        <a class="tool-card" href="buy.html#estimator" data-reveal style="--i:0">
+          <span class="tool-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M12 12h2M16 12h0M8 16h2M12 16h2"/></svg></span>
+          <div><h3>Payment estimator</h3><p>Price, down payment, rate. See the monthly cost.</p><span class="panel__go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a class="tool-card" href="sell.html#valuation" data-reveal style="--i:1">
+          <span class="tool-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10"/><path d="M12 13v4M10 15h4"/></svg></span>
+          <div><h3>Home value</h3><p>Send the address. Get a range from nearby sales.</p><span class="panel__go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a class="tool-card" href="communities.html#finder" data-reveal style="--i:2">
+          <span class="tool-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><h3>Community finder</h3><p>Filter six places by rail, trails and water.</p><span class="panel__go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -191,51 +220,27 @@
       <div class="meet__text">
         <p class="label" data-reveal>Meet Noor</p>
         <h2 class="lines"><span><span style="--l:0">The broker you</span></span><span><span style="--l:1">will work with.</span></span></h2>
-        <p data-reveal>Noor Rahman is a Colorado associate broker and REALTOR® with Keller Williams. He works with buyers, sellers and investors across Denver metro.</p>
+        <p data-reveal>Colorado associate broker and REALTOR® with Keller Williams.</p>
         <p data-reveal><span class="fill">Noor’s own story goes here once he sends it.</span></p>
-        <ul class="creds" data-reveal>
-          <li><span>Associate Broker</span><span>Colorado</span></li>
-          <li><span>REALTOR®</span><span>Member</span></li>
-          <li><span>Brokerage</span><span>Keller Williams</span></li>
-        </ul>
         <a class="btn" href="about.html" data-reveal>More about Noor <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-head">
-        <p class="label" data-reveal>Communities</p>
-        <h2 class="lines"><span><span style="--l:0">Six places,</span></span><span><span style="--l:1">known street by street.</span></span></h2>
-        <a class="link" href="communities.html" data-reveal>See all communities</a>
+  <section class="section section--alt" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="faq-head">
+        <p class="label" data-reveal>Questions</p>
+        <h2 class="lines" id="faq-title"><span><span style="--l:0">Good to</span></span><span><span style="--l:1">know first.</span></span></h2>
+        <a class="link" href="contact.html" data-reveal>Ask your own</a>
       </div>
-      <figure style="margin: 0 0 var(--s-8)">
-        <div class="frame frame--wide" data-clip data-parallax="0.08"><img src="images/neighbourhood.jpg" srcset="images/neighbourhood-960.jpg 960w, images/neighbourhood.jpg 2400w" sizes="100vw" width="2400" height="1018" alt="Tree-lined suburban streets with a lake and the Front Range at sunset" loading="lazy" style="transform: translate3d(0, var(--py, 0px), 0) scale(1.22)"></div>
-      </figure>
-      <ul class="places">
-        <li data-reveal><h3>Centennial</h3><span class="county">Arapahoe County</span><p>Centennial Center Park, the High Line Canal Trail and Dry Creek station.</p></li>
-        <li data-reveal><h3>Greenwood Village</h3><span class="county">Arapahoe County</span><p>Marjorie Perry Nature Preserve, Westlands Park and the Denver Tech Center.</p></li>
-        <li data-reveal><h3>Englewood</h3><span class="county">Arapahoe County</span><p>Belleview Park, Arapahoe Acres and Englewood station on the D Line.</p></li>
-        <li data-reveal><h3>Westminster</h3><span class="county">Adams and Jefferson</span><p>Standley Lake, the Big Dry Creek Trail and the B Line to Union Station.</p></li>
-        <li data-reveal><h3>Highlands Ranch</h3><span class="county">Douglas County</span><p>Highlands Ranch Mansion, Civic Green Park and the Wilderness Area.</p></li>
-        <li data-reveal><h3>Denver</h3><span class="county">City and County</span><p>Washington Park, the Cherry Creek Trail and Union Station.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <p class="display" data-reveal>Every address starts with one conversation.</p>
-      <svg class="street" viewBox="0 0 1200 220" role="img" aria-label="Line drawing of a street of five houses">
-        <path style="--i:0" pathLength="1" d="M20 200 H1180"/>
-        <path style="--i:1" pathLength="1" d="M60 200 V120 L150 58 L240 120 V200 M135 200 V152 H165 V200 M82 136 H112 V166 H82 Z M188 136 H218 V166 H188 Z"/>
-        <path style="--i:2" pathLength="1" d="M290 200 V104 H400 M278 104 H412 M400 200 V68 H506 V200 M388 68 H518 M312 124 H378 V176 H312 Z M424 92 H482 V200 M424 92 V200 M453 92 V200"/>
-        <path style="--i:3" pathLength="1" d="M560 200 V118 L640 40 L720 118 V200 M680 79 V50 H700 V98 M625 200 V150 H655 V200 M584 132 H608 V162 H584 Z M672 132 H696 V162 H672 Z M628 92 H652 V114 H628 Z"/>
-        <path style="--i:4" pathLength="1" d="M770 200 V142 M1010 200 V142 M756 142 L800 104 H980 L1024 142 Z M792 158 H868 V200 M792 158 V200 M900 160 H930 V186 H900 Z M954 160 H984 V186 H954 Z"/>
-        <path style="--i:5" pathLength="1" d="M1058 200 L1105 84 L1152 200 M1093 200 V164 H1117 V200 M1166 200 V150"/>
-        <circle class="sun" style="--i:6" pathLength="1" cx="1166" cy="132" r="18"/>
-      </svg>
+      <div class="faq" data-reveal>
+        <details><summary>Which areas does Noor cover?</summary><div><p>Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch, Denver and nearby Denver metro.</p></div></details>
+        <details><summary>Do I need a pre-approval before touring?</summary><div><p>Sellers usually expect one with an offer, so talk to a lender early. Noor can tell you when.</p></div></details>
+        <details><summary>How is a listing price set?</summary><div><p>From recent sales of similar homes nearby. You see those sales before you decide.</p></div></details>
+        <details><summary>Who else is involved in a purchase?</summary><div><p>Usually a lender, an inspector, an appraiser and a title company. Noor keeps their deadlines in step.</p></div></details>
+        <details><summary>Can I just ask a question first?</summary><div><p>Yes. Call or text <a class="link" href="tel:+13035978413">(303) 597-8413</a>, or write from the <a class="link" href="contact.html">contact page</a>.</p></div></details>
+      </div>
     </div>
   </section>
 
@@ -253,6 +258,7 @@
   </section>
 
 </main>
+
 
 <footer class="footer">
   <div class="container">

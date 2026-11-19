@@ -7,9 +7,9 @@
 <meta name="description" content="Call or text Noor Rahman on (303) 597-8413, email contact@noorrahman.com, or send a note about buying, selling or investing in Denver metro.">
 <meta name="theme-color" content="#121110">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nr-theme');if(t)d.dataset.theme=t;if(!sessionStorage.getItem('nr-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro');sessionStorage.setItem('nr-intro','1');}}catch(e){}})();</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/interior-living.jpg" imagesrcset="images/interior-living-960.jpg 960w, images/interior-living.jpg 2400w" imagesizes="100vw">
 <link rel="stylesheet" href="css/main.css">
 </head>
@@ -65,8 +65,8 @@
     <div class="container page-hero__inner">
       <div class="page-hero__text">
         <p class="label" data-reveal>Contact</p>
-        <h1 class="lines" id="hero-title"><span><span style="--l:0">Call, text or</span></span><span><span style="--l:1">write to Noor.</span></span></h1>
-        <p class="lead" data-reveal style="--i:3">Call or text Noor’s mobile, or send a note from this page.</p>
+        <h1 class="lines" id="hero-title"><span><span style="--l:0">Call, text</span></span><span><span style="--l:1">or write.</span></span></h1>
+        <p class="lead" data-reveal style="--i:3">Calls and texts go straight to Noor’s mobile.</p>
         <div class="hero__actions" data-reveal style="--i:4">
           <a class="btn btn--light" href="tel:+13035978413">Call (303) 597-8413</a>
           <a class="link link--light" href="#write">Write to Noor</a>
@@ -81,20 +81,18 @@
     </div>
   </section>
 
-  <section class="section" id="write">
+  <section class="section" id="write" aria-labelledby="write-title">
     <div class="container split" style="align-items: start">
       <div class="split__text">
-        <p class="label" data-reveal>Write, call or text</p>
-        <h2 class="lines"><span><span style="--l:0">Use whichever</span></span><span><span style="--l:1">is easiest.</span></span></h2>
-        <p data-reveal>Calls and texts go to Noor’s mobile.</p>
+        <p class="label" data-reveal>Get in touch</p>
+        <h2 class="lines" id="write-title"><span><span style="--l:0">Pick the</span></span><span><span style="--l:1">easiest way.</span></span></h2>
         <a class="link serif" href="tel:+13035978413" data-reveal style="font-size: clamp(1.8rem, 2.6vw, 2.6rem); line-height: 1.1">(303) 597-8413</a>
         <a class="link serif" href="mailto:contact@noorrahman.com" data-reveal style="font-size: clamp(1.6rem, 2.6vw, 2.6rem); line-height: 1.1; overflow-wrap: anywhere">contact@noorrahman.com</a>
-        <a class="link serif" href="https://www.facebook.com/p/Noor-Rahman-100069390858541/" data-reveal style="font-size: clamp(1.8rem, 2.6vw, 2.6rem); line-height: 1.1">Noor Rahman on Facebook</a>
-        <p class="small muted" data-reveal>The number is Noor’s mobile, for calls and texts.</p>
+        <a class="link serif" href="https://www.facebook.com/p/Noor-Rahman-100069390858541/" data-reveal style="font-size: clamp(1.8rem, 2.6vw, 2.6rem); line-height: 1.1">Facebook</a>
       </div>
       <div class="split__media">
         <form class="form" data-endpoint="" novalidate data-reveal>
-          <h3>Send Noor a note</h3>
+          <h3>Send a note</h3>
           <div class="field">
             <label for="f-name">Full name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required>
@@ -110,7 +108,7 @@
             </div>
           </div>
           <fieldset class="group">
-            <legend>I am thinking about</legend>
+            <legend>I’m thinking about</legend>
             <input id="f-buying" name="interest" type="radio" value="buying" autocomplete="off"><label for="f-buying">Buying</label>
             <input id="f-selling" name="interest" type="radio" value="selling" autocomplete="off"><label for="f-selling">Selling</label>
             <input id="f-both" name="interest" type="radio" value="both" autocomplete="off"><label for="f-both">Both</label>
@@ -118,55 +116,43 @@
           </fieldset>
           <div class="field">
             <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" autocomplete="off" rows="5"></textarea>
+            <textarea id="f-message" name="message" autocomplete="off" rows="4"></textarea>
           </div>
           <div>
             <button class="btn btn--solid" type="submit">Send to Noor</button>
           </div>
           <p class="form__help" aria-live="polite"></p>
-          <p class="form__note">Name and email are needed so Noor can answer. Everything else is up to you.</p>
+          <p class="form__note">Only name and email are required.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt" id="next" aria-labelledby="next-title">
     <div class="container">
       <div class="section-head">
         <p class="label" data-reveal>After you write</p>
-        <h2 class="lines"><span><span style="--l:0">What happens</span></span><span><span style="--l:1">next.</span></span></h2>
-        <p class="lead" data-reveal>Three things, in this order.</p>
+        <h2 class="lines" id="next-title"><span><span style="--l:0">What happens</span></span><span><span style="--l:1">next.</span></span></h2>
       </div>
-      <ol class="steps steps--3">
-        <li data-reveal style="--i:0"><h3>A first call</h3><p>Noor listens to what you need: the area, the timing, the budget or the home you are selling.</p></li>
-        <li data-reveal style="--i:1"><h3>A plan in writing</h3><p>You get the next steps on paper, so you can weigh them before you commit.</p></li>
-        <li data-reveal style="--i:2"><h3>Then the work starts</h3><p>The search begins, or your home goes on the market, with Noor as your one point of contact.</p></li>
+      <ol class="path__steps" style="grid-column: 1 / -1" data-reveal>
+        <li><strong>A first call</strong><span>The area, the budget, the home.</span></li>
+        <li><strong>A plan in writing</strong><span>Next steps on paper, to weigh first.</span></li>
+        <li><strong>The search or the sale starts</strong><span>With Noor as your one contact.</span></li>
       </ol>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="label" data-reveal>Before you write</p>
-        <h2 class="lines"><span><span style="--l:0">What helps</span></span><span><span style="--l:1">to mention.</span></span></h2>
-        <p class="lead" data-reveal>None of it is required. A line or two on each saves a round of questions.</p>
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="faq-head">
+        <p class="label" data-reveal>Questions</p>
+        <h2 class="lines" id="faq-title"><span><span style="--l:0">Before</span></span><span><span style="--l:1">you call.</span></span></h2>
+        <a class="link" href="#write" data-reveal>Ask your own</a>
       </div>
-      <dl class="facts">
-        <div data-reveal style="--i:0"><dt>Where</dt><dd>The community or address you have in mind.</dd></div>
-        <div data-reveal style="--i:1"><dt>When</dt><dd>Ready now, or only looking ahead.</dd></div>
-        <div data-reveal style="--i:2"><dt>What</dt><dd>A home to live in, to sell or to rent out.</dd></div>
-        <div data-reveal style="--i:3"><dt>How to reach you</dt><dd>Call, text or email, whichever you prefer.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container">
-      <p class="display" data-reveal style="max-width: 16ch">Rather talk it through? <em>Pick up the phone.</em></p>
-      <div class="hero__actions" data-reveal style="margin-top: var(--s-7)">
-        <a class="btn btn--solid" href="tel:+13035978413">Call (303) 597-8413</a>
-        <p class="muted">Noor’s mobile takes calls and texts.</p>
+      <div class="faq" data-reveal>
+        <details><summary>Is a first call free of obligation?</summary><div><p>There is no obligation to continue after a first conversation.</p></div></details>
+        <details><summary>What should I have ready?</summary><div><p>Your area and rough timing. A budget helps too.</p></div></details>
+        <details><summary>Which areas does Noor cover?</summary><div><p>Centennial, Greenwood Village, Englewood, Westminster, Highlands Ranch, Denver and nearby. <a class="link" href="communities.html#finder">Compare them</a>.</p></div></details>
       </div>
     </div>
   </section>
